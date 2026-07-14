@@ -1,0 +1,134 @@
+# American Airlines (AA) — Asia Miles & Status Points earning as a Cathay member
+# Sources (retrieved 2026-07-14):
+#   - https://www.cathaypacific.com/cx/en_HK/our-partners/american-airlines.html
+#   - Cathay 'Status Points and Asia Miles calculator' API
+#     (api.cathaypacific.com/mpo-miles-services/v3/miles-calculator/calculates)
+#   - Calculator page airline config footnotes
+
+airline: American Airlines
+iata: AA
+alliance: oneworld
+earns_status_points: true
+earns_asia_miles: true
+
+asia_miles_rule: rate_pct x actual miles flown (per sector)
+status_points_rule: >-
+  Zone lookup by booking-class tier — see data/partner-earning-model.yaml.
+  Tier letters below reference that shared matrix; the resolved per-zone
+  values are expanded inline for convenience.
+
+eligibility_notes: >-
+  Asia Miles can be earned on eligible fares classes of: - Flights marketed and operated by American Airlines; - Flights marketed by American Airlines and operated by one world® carriers; - Flights marketed by American Airlines and operated by its affiliates (American Eagle); - Codeshare flights operated by Alaska Airlines.
+
+# Observed from the Cathay calculator API (authoritative, operational data).
+earning:
+  - cabin: First
+    fare_classes: [A, F]
+    asia_miles_rate_pct: 150
+    sp_tier: A
+    status_points:
+      ultra_short: 15
+      short: 25
+      medium_1: 50
+      medium_2: 70
+      long: 90
+      ultra_long: 100
+  - cabin: Business
+    fare_classes: [C, D, I, J, R]
+    scope: domestic
+    asia_miles_rate_pct: 150
+    sp_tier: B
+    status_points:
+      ultra_short: 15
+      short: 25
+      medium_1: 45
+      medium_2: 60
+      long: 75
+      ultra_long: 85
+  - cabin: Business
+    fare_classes: [C, D, I, J, R]
+    scope: international
+    asia_miles_rate_pct: 125
+    sp_tier: B
+    status_points:
+      ultra_short: 15
+      short: 25
+      medium_1: 45
+      medium_2: 60
+      long: 75
+      ultra_long: 85
+  - cabin: Premium Economy
+    fare_classes: [W]
+    asia_miles_rate_pct: 110
+    sp_tier: D
+    status_points:
+      ultra_short: 10
+      short: 15
+      medium_1: 25
+      medium_2: 30
+      long: 40
+      ultra_long: 45
+  - cabin: Premium Economy
+    fare_classes: [P]
+    asia_miles_rate_pct: 100
+    sp_tier: E
+    status_points:
+      ultra_short: 5
+      short: 10
+      medium_1: 20
+      medium_2: 25
+      long: 35
+      ultra_long: 40
+  - cabin: Economy
+    fare_classes: [Y]
+    asia_miles_rate_pct: 100
+    sp_tier: F
+    status_points:
+      ultra_short: 5
+      short: 10
+      medium_1: 20
+      medium_2: 25
+      long: 35
+      ultra_long: 40
+  - cabin: Economy
+    fare_classes: [H, K, L, M, V]
+    asia_miles_rate_pct: 75
+    sp_tier: G
+    status_points:
+      ultra_short: 5
+      short: 10
+      medium_1: 15
+      medium_2: 20
+      long: 25
+      ultra_long: 30
+  - cabin: Economy
+    fare_classes: [G, N, Q, S]
+    asia_miles_rate_pct: 25
+    sp_tier: J
+    status_points:
+      ultra_short: 5
+      short: 5
+      medium_1: 5
+      medium_2: 10
+      long: 10
+      ultra_long: 10
+
+# As published on the partner page (cathaypacific.com), for cross-reference.
+published_page_table:
+  - cabin: First Class
+    rows:
+      - ['A, F', '150% of actual miles flown']
+  - cabin: Business Class
+    rows:
+      - ['J, C, D, R, I (International)', '125% of actual miles flown']
+      - ['J, C, D, R, I (Domestic)', '150% of actual miles flown']
+  - cabin: Premium Economy Class
+    rows:
+      - ['W', '110% of actual miles flown']
+      - ['P', '100% of actual miles flown']
+  - cabin: Economy Class
+    rows:
+      - ['Y', '100% of actual miles flown']
+      - ['H, K, L, M, V', '75% of actual miles flown']
+      - ['G, N, S, Q', '25% of actual miles flown']
+

@@ -1,0 +1,49 @@
+# LATAM Airlines (LA) — Asia Miles & Status Points earning as a Cathay member
+# Sources (retrieved 2026-07-14):
+#   - https://www.cathaypacific.com/cx/en_HK/our-partners/latam.html
+#   - Cathay 'Status Points and Asia Miles calculator' API
+#     (api.cathaypacific.com/mpo-miles-services/v3/miles-calculator/calculates)
+#   - Calculator page airline config footnotes
+
+airline: LATAM Airlines
+iata: LA
+alliance: none (left oneworld 2020)
+earns_status_points: false
+earns_asia_miles: true
+
+asia_miles_rule: rate_pct x actual miles flown (per sector)
+status_points_rule: >-
+  None. Status Points are only earned on Cathay Pacific and oneworld
+  member airlines; this partner earns Asia Miles only (calculator
+  returns 0 Status Points for all fare classes).
+
+eligibility_notes: >-
+  - LATAM flights eligible for miles accrual and redemption: - Flights marketed and operated by LATAM. - Flights marketed by LATAM and operated by Cathay Pacific. - Flights marketed by LATAM and operated by the affiliates LATAM Airlines Argentina / LATAM Airlines Brazil / LATAM Airlines Colombia / LATAM Airlines Ecuador / LATAM Express / LATAM Airlines Peru. - The following list indicates the non-applicable domestic flights of each region for each fare class. - Fare class K: Argentina. - Fare class M, L and V: Argentina and Peru. - Fare class S: Argentina, Peru and Ecuador. - Fare class N, Q and O: Argentina, Chile and Peru and Ecuador. - Participating affiliates are: - LATAM Airlines Argentina. - LATAM Airlines Brazil. - LATAM Airlines Colombia. - LATAM Airlines Ecuador. - LATAM Express. - LATAM Airlines Peru.
+
+# Observed from the Cathay calculator API (authoritative, operational data).
+earning:
+  - cabin: Business
+    fare_classes: [C, D, I, J, Z]
+    asia_miles_rate_pct: 125
+    status_points: 0
+  - cabin: Premium Economy
+    fare_classes: [P, W]
+    asia_miles_rate_pct: 110
+    status_points: 0
+  - cabin: Economy
+    fare_classes: [B, H, K, L, M, N, O, Q, S, V, X, Y]
+    asia_miles_rate_pct: 100
+    status_points: 0
+
+# As published on the partner page (cathaypacific.com), for cross-reference.
+published_page_table:
+  - cabin: Business Class
+    rows:
+      - ['J, C, D, I, Z', '125% of actual miles flown']
+  - cabin: Premium Economy Class
+    rows:
+      - ['W, P', '110% of actual miles flown']
+  - cabin: Economy Class
+    rows:
+      - ['Y, B, H, X, K, M, L, V, S, N, Q, O', '100% of actual miles flown']
+

@@ -1,0 +1,15 @@
+# Gulf Air (GF) — former Cathay / Asia Miles airline partner
+# Status as of 2026-07-14
+
+airline: Gulf Air
+iata: GF
+alliance: none
+earns_status_points: false
+earns_asia_miles: false
+
+status: >-
+  Partnership appears ended. The Cathay partner page
+  (cathaypacific.com/cx/en_HK/our-partners/gulf-air.html) no longer exists and
+  the Status Points & Asia Miles calculator returns no records for GF on any
+  probed route (including BAH-DXB, BAH-LHR), although GF still appears in the
+  calculator page's stale airline config list.

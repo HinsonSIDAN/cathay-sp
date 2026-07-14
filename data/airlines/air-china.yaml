@@ -1,0 +1,86 @@
+# Air China (CA) — Asia Miles & Status Points earning as a Cathay member
+# Sources (retrieved 2026-07-14):
+#   - https://www.cathaypacific.com/cx/en_HK/our-partners/air-china.html
+#   - Cathay 'Status Points and Asia Miles calculator' API
+#     (api.cathaypacific.com/mpo-miles-services/v3/miles-calculator/calculates)
+#   - Calculator page airline config footnotes
+
+airline: Air China
+iata: CA
+alliance: Star Alliance
+earns_status_points: false
+earns_asia_miles: true
+
+asia_miles_rule: rate_pct x actual miles flown (per sector)
+status_points_rule: >-
+  None. Status Points are only earned on Cathay Pacific and oneworld
+  member airlines; this partner earns Asia Miles only (calculator
+  returns 0 Status Points for all fare classes).
+
+eligibility_notes: >-
+  Asia Miles can only be earned in eligible fare classes on flights marketed and operated by Air China, as well as on codeshare flights operated by Cathay Pacific.
+
+# Observed from the Cathay calculator API (authoritative, operational data).
+earning:
+  - cabin: First
+    fare_classes: [F]
+    asia_miles_rate_pct: 200
+    status_points: 0
+  - cabin: First
+    fare_classes: [A]
+    asia_miles_rate_pct: 150
+    status_points: 0
+  - cabin: Business
+    fare_classes: [C, J]
+    asia_miles_rate_pct: 150
+    status_points: 0
+  - cabin: Business
+    fare_classes: [D, R, Z]
+    asia_miles_rate_pct: 125
+    status_points: 0
+  - cabin: Premium Economy
+    fare_classes: [G]
+    asia_miles_rate_pct: 110
+    status_points: 0
+  - cabin: Premium Economy
+    fare_classes: [E]
+    asia_miles_rate_pct: 100
+    status_points: 0
+  - cabin: Economy
+    fare_classes: [B, Y]
+    asia_miles_rate_pct: 100
+    status_points: 0
+  - cabin: Economy
+    fare_classes: [M, U]
+    asia_miles_rate_pct: 75
+    status_points: 0
+  - cabin: Economy
+    fare_classes: [H, Q, S, T, V, W]
+    asia_miles_rate_pct: 50
+    status_points: 0
+  - cabin: Economy
+    fare_classes: [K, L, P]
+    asia_miles_rate_pct: 25
+    status_points: 0
+
+# As published on the partner page (cathaypacific.com), for cross-reference.
+published_page_table:
+  - cabin: First Class
+    rows:
+      - ['F', '200% of actual miles flown']
+      - ['A', '150% of actual miles flown']
+  - cabin: Business Class
+    rows:
+      - ['J, C', '150% of actual miles flown']
+      - ['D, Z, R', '125% of actual miles flown']
+  - cabin: Premium Economy Class
+    rows:
+      - ['G', '110% of actual miles flown']
+      - ['E', '100% of actual miles flown']
+  - cabin: Economy Class
+    rows:
+      - ['Y, B', '100% of actual miles flown']
+      - ['M, U', '75% of actual miles flown']
+      - ['H, Q, V, W, S, T', '50% of actual miles flown']
+      - ['L, K, P', '25% of actual miles flown']
+

@@ -1,0 +1,15 @@
+# S7 Airlines (S7) — suspended Cathay / Asia Miles airline partner
+# Status as of 2026-07-14
+
+airline: S7 Airlines
+iata: S7
+alliance: oneworld (membership suspended since 2022)
+earns_status_points: false
+earns_asia_miles: false
+
+status: >-
+  No earning available. S7's oneworld membership has been suspended since 2022
+  (Russia sanctions). The Cathay partner page no longer exists and the
+  calculator returns no records for S7 on any probed route (including DME-LED,
+  DME-OVB), although S7 still appears in the calculator page's stale airline
+  config list.

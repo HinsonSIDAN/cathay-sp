@@ -1,0 +1,71 @@
+# Lufthansa (LH) — Asia Miles & Status Points earning as a Cathay member
+# Sources (retrieved 2026-07-14):
+#   - https://www.cathaypacific.com/cx/en_HK/our-partners/lufthansa.html
+#   - Cathay 'Status Points and Asia Miles calculator' API
+#     (api.cathaypacific.com/mpo-miles-services/v3/miles-calculator/calculates)
+#   - Calculator page airline config footnotes
+
+airline: Lufthansa
+iata: LH
+alliance: Star Alliance
+earns_status_points: false
+earns_asia_miles: true
+
+asia_miles_rule: rate_pct x actual miles flown (per sector)
+status_points_rule: >-
+  None. Status Points are only earned on Cathay Pacific and oneworld
+  member airlines; this partner earns Asia Miles only (calculator
+  returns 0 Status Points for all fare classes).
+
+eligibility_notes: >-
+  Asia Miles can be earned only in eligible fare classes on below routes: - Between Frankfurt and Berlin, Brussels, Budapest, Dresden, Hamburg, Hannover, Munich, Nuremberg, Oslo, Stuttgart on flights marketed and operated by Lufthansa. - Between Hong Kong and Frankfurt, Munichon flights marketed and operated by Lufthansa. - Between Vienna and Düsseldorf, Frankfurt, Zurich on codeshare flights marketed by Lufthansa and operated by Austrian Airlines. - Between Hong Kong and Auckland, Cairns, Frankfurt, Melbourne, Sydney on codeshare flights marketed by Lufthansa and operated by Cathay Pacific. - Between Zurich and Berlin, Brussels, Florence, Geneva, Hamburg, Stuttgart, Venice on codeshare flights marketed by Lufthansa and operated by SWISS.
+
+# Observed from the Cathay calculator API (authoritative, operational data).
+earning:
+  - cabin: First
+    fare_classes: [A, F]
+    asia_miles_rate_pct: 150
+    status_points: 0
+  - cabin: Business
+    fare_classes: [C, D, J, Z]
+    asia_miles_rate_pct: 125
+    status_points: 0
+  - cabin: Business
+    fare_classes: [P]
+    asia_miles_rate_pct: 100
+    status_points: 0
+  - cabin: Premium Economy
+    fare_classes: [E, G]
+    asia_miles_rate_pct: 110
+    status_points: 0
+  - cabin: Premium Economy
+    fare_classes: [N]
+    asia_miles_rate_pct: 100
+    status_points: 0
+  - cabin: Economy
+    fare_classes: [B, M, U, Y]
+    asia_miles_rate_pct: 100
+    status_points: 0
+  - cabin: Economy
+    fare_classes: [H, Q, S, V, W]
+    asia_miles_rate_pct: 50
+    status_points: 0
+
+# As published on the partner page (cathaypacific.com), for cross-reference.
+published_page_table:
+  - cabin: First Class
+    rows:
+      - ['F, A', '150% of actual miles flown']
+  - cabin: Business Class
+    rows:
+      - ['J, C, D, Z', '125% of actual miles flown']
+      - ['P', '100% of actual miles flown']
+  - cabin: Premium Economy Class
+    rows:
+      - ['G, E', '110% of actual miles flown']
+      - ['N', '100% of actual miles flown']
+  - cabin: Economy Class
+    rows:
+      - ['Y, B, M, U', '100% of actual miles flown']
+      - ['H, Q, V, W, S', '50% of actual miles flown']
+

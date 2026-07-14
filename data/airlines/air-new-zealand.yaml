@@ -1,0 +1,39 @@
+# Air New Zealand (NZ) — Asia Miles & Status Points earning as a Cathay member
+# Sources (retrieved 2026-07-14):
+#   - https://www.cathaypacific.com/cx/en_HK/our-partners/air-new-zealand.html
+#   - Calculator page airline config footnotes
+
+airline: Air New Zealand
+iata: NZ
+alliance: Star Alliance
+earns_status_points: false
+earns_asia_miles: true
+
+asia_miles_rule: rate_pct x actual miles flown (per sector)
+status_points_rule: >-
+  None. Status Points are only earned on Cathay Pacific and oneworld
+  member airlines; this partner earns Asia Miles only (calculator
+  returns 0 Status Points for all fare classes).
+
+eligibility_notes: >-
+  Asia Miles can be earned only in eligible fare classes on: - Auckland – Hong Kong and Hong Kong – Auckland flights marketed and operated by Air New Zealand - Auckland – Hong Kong and Hong Kong – Auckland codeshare flights marketed by Air New Zealand and operated by Cathay Pacific - Christchurch – Hong Kong and Hong Kong – Christchurch codeshare flights marketed by Air New Zealand and operated by Cathay Pacific
+
+data_caveats: >-
+  As of 2026-07-14 the Cathay calculator API returns no records for NZ on any
+  probed route (including HKG-AKL, its core eligible route), while the partner
+  page remains live and the partnership is still marketed. Page rates below are
+  the published reference; the calculator simply does not price NZ.
+
+# As published on the partner page (cathaypacific.com), for cross-reference.
+published_page_table:
+  - cabin: Business Class
+    rows:
+      - ['C, D, J, Z', '125% of actual miles flown']
+  - cabin: Premium Economy Class
+    rows:
+      - ['U, E, O, A', '110% of actual miles flown']
+  - cabin: Economy Class
+    rows:
+      - ['Y, B, M', '100% of actual miles flown']
+      - ['H, Q, V, W, T', '50% of actual miles flown']
+

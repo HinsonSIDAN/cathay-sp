@@ -1,0 +1,92 @@
+# Universal earning model for PARTNER-airline flights credited to Cathay
+# (Asia Miles + Status Points), reverse-engineered from Cathay's official
+# Status Points & Asia Miles calculator API and cross-checked against the
+# published partner pages.
+#
+# Sources (retrieved 2026-07-14):
+#   - https://api.cathaypacific.com/mpo-miles-services/v3/miles-calculator/calculates
+#     (probed across 25 airlines x ~10-17 routes x 4 cabins; raw samples in sources/api-raw/)
+#   - https://www.cathaypacific.com/cx/en_HK/our-partners/<airline>.html pages
+#
+# Scope: flights MARKETED by the partner airline. CX-marketed flights use the
+# CX table (data/airlines/cathay-pacific.yaml) instead.
+
+model: |
+  Asia Miles  = asia_miles_rate_pct x actual miles flown  (per one-way sector;
+                rate depends on airline + booking class, see per-airline files)
+  StatusPoints = sp_matrix[sp_tier][distance_zone]        (oneworld airlines only;
+                tier depends on airline + booking class)
+
+  Non-oneworld partners earn Asia Miles but ZERO Status Points.
+
+# Distance zones for PARTNER flights. These match Cathay's pre-2025-08-20 zone
+# scheme (the Aug 2025 zone change applied to CX-marketed flights only).
+# Boundaries verified empirically via calculator probes (e.g. 3,676mi -> medium_1
+# vs 3,751mi -> medium_2; 2,655 -> short vs 2,884 -> medium_1).
+zones:
+  ultra_short: {miles: [1, 750]}
+  short: {miles: [751, 2750]}
+  medium_1: {miles: [2751, 3750]}
+  medium_2: {miles: [3751, 5000]}
+  long: {miles: [5001, 7500]}
+  ultra_long: {miles: [7501, null]}
+
+# Status Points per (tier, zone). Tier letters are the calculator's
+# bookingClassGroup values; every oneworld airline maps its booking classes
+# onto these tiers (see per-airline files). Verified consistent across ALL
+# oneworld partners with zero conflicts (see docs/methodology.md).
+sp_matrix:
+  #     ultra_short  short  medium_1  medium_2  long  ultra_long
+  A:    [15,         25,    50,       70,       90,   100]   # First-tier (150% classes)
+  B:    [15,         25,    45,       60,       75,   85]    # Business-tier (125-150% classes)
+  C:    [10,         20,    35,       50,       65,   null]  # Business-lite (100-125% biz classes)
+  D:    [10,         15,    25,       30,       40,   45]    # Premium-economy-tier (110% classes)
+  E:    [5,          10,    20,       25,       35,   40]    # PE-standard (100% PE classes)
+  F:    [5,          10,    20,       25,       35,   40]    # Economy-full (100% classes)
+  G:    [5,          10,    15,       20,       25,   30]    # Economy-mid (50-75% classes)
+  H:    [5,          10,    15,       15,       20,   25]    # Economy-discount (25-50% classes)
+  J:    [5,          5,     5,        10,       10,   10]    # Economy-deep-discount (25% classes)
+
+sp_matrix_notes:
+  - Tiers E and F carry identical SP values; the calculator distinguishes the
+    letters (PE vs economy) but pays the same Status Points.
+  - Tier C ultra_long is null because no oneworld partner sells an eligible
+    C-tier class on a >7,500-mile sector via the calculator (unobservable cell).
+  - >-
+    The SP tier is assigned per booking class by each airline, NOT purely by the
+    Asia Miles rate — e.g. Finnair I/R earn 100% miles but sit in business tier C,
+    while Finnair W/E/T/P (also 100%) sit in tier E.
+  - The AM rate anomalies of a few percent on very short sectors (e.g. DOH-DXB)
+    are ticketed-point-mileage vs great-circle differences, not different rates.
+
+status_points_eligibility:
+  earn_sp: [CX (own table), AA, AS, AY, AT, BA, FJ, IB, JL, MH, QF, QR, RJ, UL, WY (inferred)]
+  asia_miles_only: [AC, CA, LA, LH, LX, NZ, OS, PG, ZH]
+  no_earning_observed: [GF (partner page removed), S7 (suspended), UO (never earns)]
+
+airline_index:  # data/airlines/<file>
+  CX: cathay-pacific.yaml
+  UO: hk-express.yaml
+  AA: american-airlines.yaml
+  AS: alaska-airlines.yaml
+  AT: royal-air-maroc.yaml
+  AY: finnair.yaml
+  BA: british-airways.yaml
+  FJ: fiji-airways.yaml
+  IB: iberia.yaml
+  JL: japan-airlines.yaml
+  MH: malaysia-airlines.yaml
+  QF: qantas.yaml
+  QR: qatar-airways.yaml
+  RJ: royal-jordanian.yaml
+  UL: srilankan-airlines.yaml
+  WY: oman-air.yaml
+  AC: air-canada.yaml
+  CA: air-china.yaml
+  LA: latam-airlines.yaml
+  LH: lufthansa.yaml
+  LX: swiss.yaml
+  NZ: air-new-zealand.yaml
+  OS: austrian-airlines.yaml
+  PG: bangkok-airways.yaml
+  ZH: shenzhen-airlines.yaml

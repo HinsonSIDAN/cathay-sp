@@ -30,20 +30,30 @@ zero and memberships end 31 Dec 2026). See [docs/2027-programme-changes.md](docs
 
 ## How Status Points are calculated
 
-There is **no single formula** — SP earnings are looked up from published tables, keyed by:
+Two distinct models, both table lookups on distance zone + booking class:
+
+**1. Cathay Pacific-marketed flights** ([data/airlines/cathay-pacific.yaml](data/airlines/cathay-pacific.yaml)):
 
 ```
-SP = table[ airline ][ distance zone or route ][ cabin ][ fare class / fare type ]
+SP = cx_table[ distance zone (6 zones, post-2025-08-20) ][ cabin ][ fare classes × fare type (Flex/Essential/Light) ]
+Asia Miles = SP × 100   (exact, every cell)
 ```
 
-- **Airline** — Cathay Pacific-marketed flights use one table; HK Express and each partner
-  airline have their own tables.
-- **Distance zone** — based on miles flown between origin and destination (see
-  [data/zones.yaml](data/zones.yaml)).
-- **Cabin & fare class / fare type** — the booking class letter (e.g. Y, B, H, K) and, on
-  Cathay Pacific, the fare type (Flex / Essential / Light).
-- On Cathay Pacific-marketed flights, **Asia Miles = Status Points × 100** in every published
-  cell of the current table.
+**2. Partner-marketed flights** ([data/partner-earning-model.yaml](data/partner-earning-model.yaml)):
+
+```
+Asia Miles    = rate% × actual miles flown        (rate% per airline + booking class)
+Status Points = sp_matrix[ tier ][ distance zone ] (tier per airline + booking class;
+                                                    legacy 6-zone scheme incl. Medium-1/Medium-2)
+```
+
+- **Status Points are earned only on Cathay Pacific and oneworld member airlines.**
+  Non-oneworld partners (Air Canada, Air China, Air NZ, Austrian, Bangkok Airways, LATAM,
+  Lufthansa, SWISS, Shenzhen) earn Asia Miles but **zero** Status Points.
+- HK Express earns nothing (redemption partner only).
+- The partner SP matrix was extracted from Cathay's own calculator API and verified
+  conflict-free across all oneworld partners — see
+  [docs/methodology.md](docs/methodology.md).
 
 ## Repository layout
 
@@ -51,20 +61,25 @@ SP = table[ airline ][ distance zone or route ][ cabin ][ fare class / fare type
 README.md                     ← you are here
 data/
   program.yaml                ← tiers, thresholds, program-level rules
-  zones.yaml                  ← distance zone definitions
+  zones.yaml                  ← CX distance zones (post-2025-08-20)
+  partner-earning-model.yaml  ← partner zones + universal SP matrix + airline index
   airlines/
     cathay-pacific.yaml       ← CX-marketed flights earning table
-    hk-express.yaml           ← UO earning table
-    <partner>.yaml            ← one file per partner airline
+    hk-express.yaml           ← UO (no earning)
+    <partner>.yaml            ← one file per partner airline (25 airlines)
 docs/
-  methodology.md              ← sources, retrieval dates, verification notes
-  2027-programme-changes.md   ← announced programme changes
-sources/                      ← archived source documents (PDFs)
+  methodology.md              ← sources, harvest method, verification log
+  2027-programme-changes.md   ← announced programme changes (eff. 2027-01-01)
+sources/
+  *.pdf                       ← archived official PDFs
+  api-raw/*.jsonl             ← raw calculator API samples (~1,900 queries)
 ```
 
 ## Status of coverage
 
-See [docs/methodology.md](docs/methodology.md) for the live coverage checklist.
+**Complete** for all 14 current oneworld partners + 11 non-alliance partners + CX + HK
+Express, as of 2026-07-14. See [docs/methodology.md](docs/methodology.md) for the checklist,
+verification log, and known gaps (Oman Air SP pending calculator support).
 
 ## Disclaimer
 

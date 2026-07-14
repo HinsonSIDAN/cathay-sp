@@ -1,0 +1,80 @@
+# Royal Air Maroc (AT) — Asia Miles & Status Points earning as a Cathay member
+# Sources (retrieved 2026-07-14):
+#   - https://www.cathaypacific.com/cx/en_HK/our-partners/royal-air-maroc.html
+#   - Cathay 'Status Points and Asia Miles calculator' API
+#     (api.cathaypacific.com/mpo-miles-services/v3/miles-calculator/calculates)
+#   - Calculator page airline config footnotes
+
+airline: Royal Air Maroc
+iata: AT
+alliance: oneworld
+earns_status_points: true
+earns_asia_miles: true
+
+asia_miles_rule: rate_pct x actual miles flown (per sector)
+status_points_rule: >-
+  Zone lookup by booking-class tier — see data/partner-earning-model.yaml.
+  Tier letters below reference that shared matrix; the resolved per-zone
+  values are expanded inline for convenience.
+
+eligibility_notes: >-
+  Asia Miles can be earned only in eligible fare classes on: - Flights marketed and operated by Royal Air Maroc - Flight marketed by Royal Air Maroc and operated by one world® airlines Please note that itineraries involving Jeddah (JED) and Medina (MED) are only eligible for accrual but not redemption.
+
+# Observed from the Cathay calculator API (authoritative, operational data).
+earning:
+  - cabin: Business
+    fare_classes: [C, D, I, J]
+    asia_miles_rate_pct: 125
+    sp_tier: B
+    status_points:
+      ultra_short: 15
+      short: 25
+      medium_1: 45
+      medium_2: 60
+      long: 75
+      ultra_long: 85
+  - cabin: Economy
+    fare_classes: [Y]
+    asia_miles_rate_pct: 100
+    sp_tier: F
+    status_points:
+      ultra_short: 5
+      short: 10
+      medium_1: 20
+      medium_2: 25
+      long: 35
+      ultra_long: 40
+  - cabin: Economy
+    fare_classes: [B, H]
+    asia_miles_rate_pct: 50
+    sp_tier: H
+    status_points:
+      ultra_short: 5
+      short: 10
+      medium_1: 15
+      medium_2: 15
+      long: 20
+      ultra_long: 25
+  - cabin: Economy
+    fare_classes: [K, L, M]
+    asia_miles_rate_pct: 25
+    sp_tier: J
+    status_points:
+      ultra_short: 5
+      short: 5
+      medium_1: 5
+      medium_2: 10
+      long: 10
+      ultra_long: 10
+
+# As published on the partner page (cathaypacific.com), for cross-reference.
+published_page_table:
+  - cabin: Business Class
+    rows:
+      - ['J, C, D, I', '125% of actual miles flown']
+  - cabin: Economy Class
+    rows:
+      - ['Y', '100% of actual miles flown']
+      - ['B, H', '50% of actual miles flown']
+      - ['K, M, L', '25% of actual miles flown']
+

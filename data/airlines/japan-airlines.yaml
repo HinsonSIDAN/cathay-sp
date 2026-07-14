@@ -1,0 +1,168 @@
+# Japan Airlines (JL) — Asia Miles & Status Points earning as a Cathay member
+# Sources (retrieved 2026-07-14):
+#   - https://www.cathaypacific.com/cx/en_HK/our-partners/japan-airlines.html
+#   - Cathay 'Status Points and Asia Miles calculator' API
+#     (api.cathaypacific.com/mpo-miles-services/v3/miles-calculator/calculates)
+#   - Calculator page airline config footnotes
+# JL earning is scope-dependent: Japan-domestic flights use different booking
+# classes/rates than international. Sections below are hand-curated from
+# calculator API observations on both route types (HKG/NRT international +
+# HND-CTS/HND-OKA domestic probes).
+
+airline: Japan Airlines
+iata: JL
+alliance: oneworld
+earns_status_points: true
+earns_asia_miles: true
+
+asia_miles_rule: rate_pct x actual miles flown (per sector)
+status_points_rule: >-
+  Zone lookup by booking-class tier — see data/partner-earning-model.yaml.
+  Tier letters below reference that shared matrix; the resolved per-zone
+  values are expanded inline for convenience. (Japan-domestic sectors are all
+  ultra_short or short zone by distance.)
+
+eligibility_notes: >-
+  Asia Miles can be earned in eligible fare classes on flights marketed and
+  operated by Japan Airlines / Japan Transocean Air / J-AIR, and on codeshare
+  flights operated by all oneworld carriers. Also earnable (and redeemable) on
+  flights marketed by Japan Airlines and operated by Japan Air Commuter or
+  Hokkaido Air System.
+
+# Observed from the Cathay calculator API (authoritative, operational data).
+earning:
+  # ------- International -------
+  - cabin: First
+    scope: international
+    fare_classes: [F, A]
+    asia_miles_rate_pct: 150
+    sp_tier: A
+    status_points:
+      ultra_short: 15
+      short: 25
+      medium_1: 50
+      medium_2: 70
+      long: 90
+      ultra_long: 100
+  - cabin: Business
+    scope: international
+    fare_classes: [C]      # page also lists J, D, I at 125%
+    asia_miles_rate_pct: 125
+    sp_tier: B
+    status_points:
+      ultra_short: 15
+      short: 25
+      medium_1: 45
+      medium_2: 60
+      long: 75
+      ultra_long: 85
+  - cabin: Business
+    scope: international
+    fare_classes: [H]      # page lists X at 70%; calculator offers H
+    asia_miles_rate_pct: 70
+    sp_tier: G
+    status_points:
+      ultra_short: 5
+      short: 10
+      medium_1: 15
+      medium_2: 20
+      long: 25
+      ultra_long: 30
+  - cabin: Premium Economy
+    scope: international
+    fare_classes: [W]
+    asia_miles_rate_pct: 100
+    sp_tier: F
+    status_points:
+      ultra_short: 5
+      short: 10
+      medium_1: 20
+      medium_2: 25
+      long: 35
+      ultra_long: 40
+  - cabin: Premium Economy
+    scope: international
+    fare_classes: [P, R]   # page lists E, P at 50% and W, R at 100%; calculator prices R at 50%
+    asia_miles_rate_pct: 50
+    sp_tier: H
+    status_points:
+      ultra_short: 5
+      short: 10
+      medium_1: 15
+      medium_2: 15
+      long: 20
+      ultra_long: 25
+  - cabin: Economy
+    scope: international
+    fare_classes: [Y]
+    asia_miles_rate_pct: 100
+    sp_tier: F
+    status_points:
+      ultra_short: 5
+      short: 10
+      medium_1: 20
+      medium_2: 25
+      long: 35
+      ultra_long: 40
+
+  # ------- Japan domestic (JL/Japan Transocean Air/J-AIR etc.) -------
+  # Domestic sectors are ultra_short (<751mi) or short (751-2,750mi) by distance.
+  - cabin: First
+    scope: domestic
+    fare_classes: [F]
+    asia_miles_rate_pct: 150
+    sp_tier: A
+    status_points:
+      ultra_short: 15
+      short: 25
+  - cabin: Business    # JL domestic "Class J"
+    scope: domestic
+    fare_classes: [E]
+    asia_miles_rate_pct: 125
+    sp_tier: B
+    status_points:
+      ultra_short: 15
+      short: 25
+  - cabin: Economy
+    scope: domestic
+    fare_classes: [J, Y]
+    asia_miles_rate_pct: 100
+    sp_tier: F
+    status_points:
+      ultra_short: 5
+      short: 10
+  - cabin: Economy    # discounted domestic fares
+    scope: domestic
+    fare_classes: [A, I]
+    asia_miles_rate_pct: 50
+    sp_tier: H
+    status_points:
+      ultra_short: 5
+      short: 10
+
+discrepancies:
+  - >-
+    Partner page lists international Premium Economy R at 100%; the calculator
+    prices R at 50% (tier H). Page also lists business classes J, D, I (125%) and
+    X (70%), and economy B, H, K, M, L, V, S (50%) which the calculator does not
+    offer for the probed routes — page values likely still apply when those
+    classes are ticketed; SP tier can be inferred from the matching rate tier.
+
+# As published on the partner page (cathaypacific.com), for cross-reference.
+published_page_table:
+  - cabin: First Class (international)
+    rows:
+      - ['F, A', '150% of actual miles flown']
+      - ['F (domestic) / F (domestic discounted fares)', '150% / 125% of actual miles flown']
+  - cabin: Business Class
+    rows:
+      - ['J, C, D, I', '125% of actual miles flown']
+      - ['X', '70% of actual miles flown']
+  - cabin: Premium Economy Class
+    rows:
+      - ['W, R', '100% of actual miles flown']
+      - ['E, P', '50% of actual miles flown']
+  - cabin: Economy Class
+    rows:
+      - ['Y / B, H, K, M, L, V, S', '100% / 50% of actual miles flown']
+      - ['J, Y (domestic) / J, Y (domestic discounted fares)', '100% / 50% of actual miles flown']

@@ -1,0 +1,54 @@
+# Air Canada (AC) — Asia Miles & Status Points earning as a Cathay member
+# Sources (retrieved 2026-07-14):
+#   - https://www.cathaypacific.com/cx/en_HK/our-partners/air-canada.html
+#   - Cathay 'Status Points and Asia Miles calculator' API
+#     (api.cathaypacific.com/mpo-miles-services/v3/miles-calculator/calculates)
+#   - Calculator page airline config footnotes
+
+airline: Air Canada
+iata: AC
+alliance: Star Alliance
+earns_status_points: false
+earns_asia_miles: true
+
+asia_miles_rule: rate_pct x actual miles flown (per sector)
+status_points_rule: >-
+  None. Status Points are only earned on Cathay Pacific and oneworld
+  member airlines; this partner earns Asia Miles only (calculator
+  returns 0 Status Points for all fare classes).
+
+eligibility_notes: >-
+  - Asia Miles can be earned in eligible fare classes on flights marketed and operated by Air Canada on the routes below: - Flights between Vancouver and Calgary, Edmonton, Kelowna, Montreal, Toronto, Victoria, Winnipeg - Flights between Toronto and Halifax, Montreal, Ottawa, Quebec, Regina, Saskatoon, St John's, Winnipeg - Asia Miles can also be earned in eligible fare classes on codeshare flights marketed by Air Canada and operated by Cathay Pacific on the routes below: - Flights between Hong Kong and Bangkok, Cebu, Chiang Mai, Hanoi, Ho Chi Minh City, Kuala Lumpur, Manila, Phuket - Economy Basic fare is ineligible for Asia Miles accrual.
+
+# Observed from the Cathay calculator API (authoritative, operational data).
+earning:
+  - cabin: Business
+    fare_classes: [C, D, J, P, Z]
+    asia_miles_rate_pct: 125
+    status_points: 0
+  - cabin: Premium Economy
+    fare_classes: [A, E, O]
+    asia_miles_rate_pct: 110
+    status_points: 0
+  - cabin: Economy
+    fare_classes: [B, H, M, Q, U, V, W, Y]
+    asia_miles_rate_pct: 100
+    status_points: 0
+  - cabin: Economy
+    fare_classes: [G, K, L, S, T]
+    asia_miles_rate_pct: 25
+    status_points: 0
+
+# As published on the partner page (cathaypacific.com), for cross-reference.
+published_page_table:
+  - cabin: Business Class
+    rows:
+      - ['J, C, D, Z, P', '125% of actual miles flown']
+  - cabin: Premium Economy Class
+    rows:
+      - ['A, E, O', '110% of actual miles flown']
+  - cabin: Economy Class
+    rows:
+      - ['Y, B, M, U, H, Q, V, W', '100% of actual miles flown']
+      - ['S, T, L, K, G', '25% of actual miles flown']
+

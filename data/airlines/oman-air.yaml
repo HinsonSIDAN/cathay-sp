@@ -1,0 +1,40 @@
+# Oman Air (WY) — Asia Miles & Status Points earning as a Cathay member
+# Sources (retrieved 2026-07-14):
+#   - https://www.cathaypacific.com/cx/en_HK/our-partners/oman-air.html
+#   - Calculator page airline config footnotes
+
+airline: Oman Air
+iata: WY
+alliance: oneworld
+earns_status_points: true
+earns_asia_miles: true
+
+asia_miles_rule: rate_pct x actual miles flown (per sector)
+status_points_rule: >-
+  Zone lookup by booking-class tier — see data/partner-earning-model.yaml.
+
+data_caveats: >-
+  Oman Air joined oneworld on 30 June 2024 and has a live Cathay partner earn
+  page, but as of 2026-07-14 the Cathay Status Points & Asia Miles calculator
+  does not return data for WY (not in its supported airline list). The
+  Asia Miles rates below are as published. Status Points tiers are INFERRED
+  from the standard oneworld partner matrix by matching cabin/rate
+  (unverified against the calculator):
+  F, A -> tier A; J, C, D, I, P -> tier B; Y -> tier F; B -> tier H;
+  H, K, M, L, V, S, N, Q, O, R, T -> tier J.
+  Verify against the calculator or booking flow before relying on WY SP numbers.
+
+# As published on the partner page (cathaypacific.com), for cross-reference.
+published_page_table:
+  - cabin: Business Studio
+    rows:
+      - ['F, A', '150% of actual miles flown']
+  - cabin: Business Class
+    rows:
+      - ['J, C, D, I, P', '125% of actual miles flown']
+  - cabin: Economy Class
+    rows:
+      - ['Y', '100% of actual miles flown']
+      - ['B', '50% of actual miles flown']
+      - ['H, K, M, L, V, S, N, Q, O, R, T', '25% of actual miles flown']
+
