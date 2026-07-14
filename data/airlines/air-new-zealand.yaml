@@ -18,11 +18,25 @@ status_points_rule: >-
 eligibility_notes: >-
   Asia Miles can be earned only in eligible fare classes on: - Auckland – Hong Kong and Hong Kong – Auckland flights marketed and operated by Air New Zealand - Auckland – Hong Kong and Hong Kong – Auckland codeshare flights marketed by Air New Zealand and operated by Cathay Pacific - Christchurch – Hong Kong and Hong Kong – Christchurch codeshare flights marketed by Air New Zealand and operated by Cathay Pacific
 
-data_caveats: >-
-  As of 2026-07-14 the Cathay calculator API returns no records for NZ on any
-  probed route (including HKG-AKL, its core eligible route), while the partner
-  page remains live and the partnership is still marketed. Page rates below are
-  the published reference; the calculator simply does not price NZ.
+# Observed from the Cathay calculator API on HKG-AKL (5,697 ticketed miles),
+# 2026-07-14. All classes earn 0 Status Points (non-oneworld partner).
+earning:
+  - cabin: Business
+    fare_classes: [C, D, J, Z]
+    asia_miles_rate_pct: 125
+    status_points: 0
+  - cabin: Premium Economy
+    fare_classes: [A, E, O, U]
+    asia_miles_rate_pct: 110
+    status_points: 0
+  - cabin: Economy
+    fare_classes: [Y, B, M]
+    asia_miles_rate_pct: 100
+    status_points: 0
+  - cabin: Economy
+    fare_classes: [H, Q, T, V, W]
+    asia_miles_rate_pct: 50
+    status_points: 0
 
 # As published on the partner page (cathaypacific.com), for cross-reference.
 published_page_table:

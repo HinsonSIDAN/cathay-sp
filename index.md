@@ -16,13 +16,16 @@ Points & Asia Miles calculator; data current as of **2026-07-14**.
 
 Start here:
 
-- Want a number for a specific flight? → the airline's entry under [[airlines]], then
-  [[earning/worked-examples]] for how to combine sectors.
+- Want a number for a specific flight? → the route's entry under [[routes]] (resolved
+  per fare class), or the airline's entry under [[airlines]] plus
+  [[earning/worked-examples]] for combining sectors.
 - Want the mechanics? → [[earning]] (CX table, partner SP matrix, zones).
 - Want the tier rules? → [[programme]] (thresholds today, 2027 changes).
 
 ## Top-level areas
 
+- [Routes](routes/index.md) — per-route resolved SP/miles tables: all 167 CX-marketed
+  sectors from Hong Kong + major oneworld trunk sectors
 - [Airlines](airlines/index.md) — per-airline fare class tables: CX, HK Express, all 14
   oneworld partners, 9 Asia-Miles-only partners, 2 ended/suspended
 - [Earning mechanics](earning/index.md) — the two earning models, distance zones, universal

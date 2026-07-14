@@ -12,6 +12,7 @@ index.md            ← KB root entry (start here)
 programme/          ← status tiers, qualification, 2027 programme changes
 earning/            ← earning mechanics: CX model, partner SP matrix, zones, examples
 airlines/           ← one entry per airline (27 airlines)
+routes/             ← one entry per route (188): resolved SP/miles per fare class
 meta/               ← sensitivity policy, tag glossary, methodology & verification log
 data/               ← machine-readable layer (YAML) that generated the entries
 sources/            ← archived official PDF + raw calculator API samples (JSONL)

@@ -21,6 +21,7 @@ Pick 3–6 tags per entry from the lists below; add new tags here in the same ch
 ## Domain tags
 
 - **earning** — how flights turn into SP/miles
+- **route** — a specific city-pair entry with resolved per-class values
 - **status-points** — SP-specific mechanics and thresholds
 - **programme** — membership programme rules (tiers, cycles, 2027 changes)
 - **airline** — a specific airline's earning entry

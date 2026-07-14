@@ -39,6 +39,22 @@ last_reviewed: '2026-07-14'
 | 2026-07-14 | Partner SP matrix consistency, 13 oneworld airlines, ~1,900 samples | Zero conflicts |
 | 2026-07-14 | API rates vs published page tables, all airlines | Match, except QF discount economy and JL R (flagged in entries) |
 | 2026-07-14 | Zone boundaries 750/2,750/3,750/5,000/7,500 | Confirmed |
+| 2026-07-14 | NZ re-probed on HKG–AKL (earlier probe was invalid) | Priced: AM per published rates, 0 SP |
+| 2026-07-14 | CX route discovery: HKG × all 383 calculator airports | API validates routes — only real CX sectors price |
+
+## Route-level entries
+
+The `routes/` entries were generated from a dedicated harvest (2026-07-14):
+
+- **CX network discovery**: the calculator API validates routes for CX (non-existent
+  sectors return no records), so HKG was probed against all 383 calculator airports —
+  167 live CX-marketed sectors found (including codeshare and intermodal points).
+- Each live sector was harvested across all 4 cabins; a parallel BA probe on the same
+  pair supplies the exact ticketed mileage (BA Y = 100% of miles flown) and the partner
+  zone. Raw data: `sources/routes-raw/*.jsonl`.
+- 21 oneworld trunk sectors (LHR–JFK, SYD–MEL, DOH–LHR, …) were generated from the
+  airline-harvest samples.
+- Route entries are per one-way sector; values are direction-symmetric.
 
 ## Known gaps / watch items
 
