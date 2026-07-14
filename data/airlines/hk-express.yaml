@@ -1,0 +1,23 @@
+# HK Express (UO) — Cathay Group low-cost carrier
+# Sources (retrieved 2026-07-14):
+#   - https://www.cathaypacific.com/cx/en_HK/faqs/cathay-membership-programme/asia-miles/redeeming-hk-express-flights/can-i-earn-asia-miles-for-hk-express-flight-bookings.html
+#   - https://www.cathaypacific.com/cx/en_HK/our-partners/hk-express.html
+
+airline: HK Express
+iata: UO
+alliance: none (Cathay Group subsidiary)
+relationship: redemption partner only
+
+earning:
+  status_points: none
+  asia_miles: none
+  notes: >-
+    HK Express flight bookings do NOT earn Asia Miles or Status Points directly.
+    The only indirect earning route is credit-card spend (e.g. Standard Chartered
+    Cathay Mastercard earns miles on eligible HK Express spending, HK market).
+    HK Express is not in the Cathay Status Points & Asia Miles calculator's
+    supported airline list.
+
+redemption:
+  - Asia Miles can be redeemed for HK Express flight tickets ("Full Miles for Flight
+    Ticket"), including Essential fare category tickets.
