@@ -31,8 +31,10 @@ Start here:
   oneworld partners, 9 Asia-Miles-only partners, 2 ended/suspended
 - [Earning mechanics](earning/index.md) — the two earning models, distance zones, universal
   partner SP matrix, worked examples
-- [Membership programme](programme/index.md) — Green/Silver/Gold/Diamond thresholds and the
-  2027 enhanced programme
+- [Membership programme](programme/index.md) — Green/Silver/Gold/Diamond thresholds, the
+  2027 enhanced programme, and credit-card SP earning
+- [Status run strategies](strategies/index.md) — earning SP cheaply: ex-origin fares,
+  sector splitting, partner short-hop runs, Doha transits, timing, cost benchmarks
 
 ## Key facts at a glance
 

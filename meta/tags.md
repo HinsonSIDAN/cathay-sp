@@ -14,6 +14,7 @@ Pick 3–6 tags per entry from the lists below; add new tags here in the same ch
 - **guide** — how-to / worked walkthroughs
 - **index** — folder index entries
 - **policy** — rules for this KB itself
+- **strategy** — tactics for earning SP cheaply (status runs, fare arbitrage, timing)
 - **methodology** — how the data was gathered and verified
 - **meta** — about the KB, not about Cathay
 - **glossary** — term/vocabulary definitions
