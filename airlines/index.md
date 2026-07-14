@@ -17,26 +17,26 @@ shared partner mechanics (zones, SP matrix) live in [[earning/partner-model]].
 
 ## oneworld partners (earn Status Points + Asia Miles)
 
-- [Alaska Airlines (AS)](alaska-airlines.md) — First-tier classes span F/J cabins; no >2,750mi routes
-- [American Airlines (AA)](american-airlines.md) — domestic business earns 150% vs 125% international
-- [British Airways (BA)](british-airways.md) — deep-discount economy K–V at 25%
-- [Fiji Airways (FJ)](fiji-airways.md) — full member since 2025; business J/C at 150%
-- [Finnair (AY)](finnair.md) — business I/R earn 100% miles but business-tier SP
-- [Iberia (IB)](iberia.md) — big 25% deep-discount class list
-- [Japan Airlines (JL)](japan-airlines.md) — separate Japan-domestic classes (Class J = E)
-- [Malaysia Airlines (MH)](malaysia-airlines.md) — Business Suite F/A/P at 150%
+- [Alaska Airlines (AS)](alaska-airlines.md) — First-tier classes span F/J cabins; no >2,750mi routes · [96 registered sectors](alaska-airlines-routes.md)
+- [American Airlines (AA)](american-airlines.md) — domestic business earns 150% vs 125% international · [424 registered sectors](american-airlines-routes.md)
+- [British Airways (BA)](british-airways.md) — deep-discount economy K–V at 25% · [332 registered sectors](british-airways-routes.md)
+- [Fiji Airways (FJ)](fiji-airways.md) — full member since 2025; business J/C at 150% · [21 registered sectors](fiji-airways-routes.md)
+- [Finnair (AY)](finnair.md) — business I/R earn 100% miles but business-tier SP · [83 registered sectors](finnair-routes.md)
+- [Iberia (IB)](iberia.md) — big 25% deep-discount class list · [174 registered sectors](iberia-routes.md)
+- [Japan Airlines (JL)](japan-airlines.md) — separate Japan-domestic classes (Class J = E); the calculator prices any JL city pair, so no finite sector registry applies
+- [Malaysia Airlines (MH)](malaysia-airlines.md) — Business Suite F/A/P at 150% · [69 registered sectors](malaysia-airlines-routes.md)
 - [Oman Air (WY)](oman-air.md) — newest member; SP tiers inferred, calculator support pending
-- [Qantas (QF)](qantas.md) — discount economy 50% (page says 25% — flagged)
-- [Qatar Airways (QR)](qatar-airways.md) — business P earns only 75% / tier G
-- [Royal Air Maroc (AT)](royal-air-maroc.md) — economy discounts at 50/25%
-- [Royal Jordanian (RJ)](royal-jordanian.md) — business I/Z at 100% / tier C
-- [SriLankan Airlines (UL)](srilankan-airlines.md) — four economy rate bands
+- [Qantas (QF)](qantas.md) — discount economy 50% (page says 25% — flagged) · [160 registered sectors](qantas-routes.md)
+- [Qatar Airways (QR)](qatar-airways.md) — business P earns only 75% / tier G · [155 registered sectors](qatar-airways-routes.md)
+- [Royal Air Maroc (AT)](royal-air-maroc.md) — economy discounts at 50/25% · [54 registered sectors](royal-air-maroc-routes.md)
+- [Royal Jordanian (RJ)](royal-jordanian.md) — business I/Z at 100% / tier C · [51 registered sectors](royal-jordanian-routes.md)
+- [SriLankan Airlines (UL)](srilankan-airlines.md) — four economy rate bands · [38 registered sectors](srilankan-airlines-routes.md)
 
 ## Other partners (earn Asia Miles only — 0 Status Points)
 
 - [Air Canada (AC)](air-canada.md) — limited Canadian domestic routes + HKG codeshares
 - [Air China (CA)](air-china.md) — First F earns 200%, the highest rate of any partner
-- [Air New Zealand (NZ)](air-new-zealand.md) — AKL–HKG only; calculator returns no data
+- [Air New Zealand (NZ)](air-new-zealand.md) — AKL–HKG only (API-verified rates, 0 SP)
 - [Austrian Airlines (OS)](austrian-airlines.md) — few Vienna routes + HKG codeshares
 - [Bangkok Airways (PG)](bangkok-airways.md)
 - [LATAM Airlines (LA)](latam-airlines.md) — left oneworld 2020, hence 0 SP

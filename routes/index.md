@@ -1,6 +1,6 @@
 ---
 title: Routes
-description: Per-route Status Points and Asia Miles — resolved fare-class tables for all 167 CX-marketed sectors from Hong Kong plus major oneworld partner trunk sectors.
+description: Per-route Status Points and Asia Miles — resolved fare-class tables for 433 CX-marketed sectors (167 from Hong Kong + 266 codeshare feeders) and oneworld trunk sectors.
 tags: [index, route, earning]
 sensitivity: public
 last_reviewed: '2026-07-14'
@@ -9,6 +9,9 @@ last_reviewed: '2026-07-14'
 Resolved earning per **one-way sector** (values identical in both directions), straight
 from the official Cathay calculator. Each entry: the full CX fare-class table for the
 sector, plus the oneworld-partner SP tier values at that distance.
+
+Per-airline registered-sector lists (partner networks from their hubs) live next to each
+airline entry — see [[airlines]].
 
 SP teasers below: Economy Flex (Y) / Business Flex (J) on CX-marketed sectors.
 
@@ -241,6 +244,369 @@ SP teasers below: Economy Flex (Y) / Business Flex (J) on CX-marketed sectors.
 | [HKG–XOP (XOP)](hkg-xop.md) | — | Long | 70 / — |
 | [HKG–XSH (XSH)](hkg-xsh.md) | — | Long | 70 / — |
 
+## Cathay Pacific codeshare feeder sectors (beyond Hong Kong)
+
+CX-marketed sectors that don't touch HKG — codeshare connections sold under a CX
+flight number (operated by partner airlines). They earn from the CX table like any
+CX-marketed sector. Grouped by connecting hub; the census scope is documented in
+the methodology entry (meta area, linked from the KB root).
+
+### via LHR (London Heathrow) — 37 sectors
+
+| Route | Distance | CX zone | SP Y-Flex / J-Flex |
+|---|---|---|---|
+| [LHR–LAS (Las Vegas)](lhr-las.md) | — | Long | 70 / — |
+| [LHR–LYS (Lyon)](lhr-lys.md) | — | Ultra-short | 25 / — |
+| [LHR–NCE (Nice)](lhr-nce.md) | — | Ultra-short | 25 / — |
+| [LHR–MAN (Manchester)](lhr-man.md) | 150 mi | Ultra-short | 25 / — |
+| [LHR–LPL (Liverpool)](lhr-lpl.md) | 165 mi | Ultra-short | 25 / — |
+| [LHR–JER (Jersey)](lhr-jer.md) | 173 mi | Ultra-short | 25 / — |
+| [LHR–BRU (Brussels)](lhr-bru.md) | 217 mi | Ultra-short | 25 / — |
+| [LHR–NCL (Newcastle)](lhr-ncl.md) | 251 mi | Ultra-short | 25 / — |
+| [LHR–DUS (Dusseldorf)](lhr-dus.md) | 310 mi | Ultra-short | 25 / — |
+| [LHR–BFS (Belfast Intl)](lhr-bfs.md) | 324 mi | Ultra-short | 25 / — |
+| [LHR–CGN (Cologne)](lhr-cgn.md) | 331 mi | Ultra-short | 25 / — |
+| [LHR–EDI (Edinburgh)](lhr-edi.md) | 331 mi | Ultra-short | 25 / — |
+| [LHR–GLA (Glasgow)](lhr-gla.md) | 344 mi | Ultra-short | 25 / — |
+| [LHR–ABZ (Aberdeen)](lhr-abz.md) | 402 mi | Ultra-short | 25 / — |
+| [LHR–FRA (Frankfurt)](lhr-fra.md) | 406 mi | Ultra-short | 25 / — |
+| [LHR–HAJ (Hannover)](lhr-haj.md) | 437 mi | Ultra-short | 25 / — |
+| [LHR–HAM (Hamburg)](lhr-ham.md) | 463 mi | Ultra-short | 25 / — |
+| [LHR–GVA (Geneva)](lhr-gva.md) | 469 mi | Ultra-short | 25 / — |
+| [LHR–STR (Stuttgart)](lhr-str.md) | 469 mi | Ultra-short | 25 / — |
+| [LHR–ZRH (Zurich)](lhr-zrh.md) | 488 mi | Ultra-short | 25 / — |
+| [LHR–MUC (Munich)](lhr-muc.md) | 588 mi | Ultra-short | 25 / — |
+| [LHR–TXL (Berlin Tegel)](lhr-txl.md) | 588 mi | Ultra-short | 25 / — |
+| [LHR–BER (Berlin)](lhr-ber.md) | 597 mi | Ultra-short | 25 / — |
+| [LHR–CPH (Copenhagen)](lhr-cph.md) | 608 mi | Ultra-short | 25 / — |
+| [LHR–PRG (Prague)](lhr-prg.md) | 648 mi | Ultra-short | 25 / — |
+| [LHR–GOT (Gothenburg)](lhr-got.md) | 664 mi | Ultra-short | 25 / — |
+| [LHR–BCN (Barcelona)](lhr-bcn.md) | 713 mi | Ultra-short | 25 / — |
+| [LHR–VIE (Vienna)](lhr-vie.md) | 790 mi | Short – Type 1 | 30 / — |
+| [LHR–VLC (Valencia)](lhr-vlc.md) | 828 mi | Short – Type 1 | 30 / — |
+| [LHR–PMI (Palma de Mallorca)](lhr-pmi.md) | 837 mi | Short – Type 1 | 30 / — |
+| [LHR–ARN (Stockholm)](lhr-arn.md) | 908 mi | Short – Type 1 | 30 / — |
+| [LHR–LIS (Lisbon)](lhr-lis.md) | 972 mi | Short – Type 1 | 30 / — |
+| [LHR–FAO (Faro)](lhr-fao.md) | 1,064 mi | Short – Type 1 | 30 / — |
+| [LHR–GIB (Gibraltar)](lhr-gib.md) | 1,086 mi | Short – Type 1 | 30 / — |
+| [LHR–HEL (Helsinki)](lhr-hel.md) | 1,148 mi | Short – Type 1 | 30 / — |
+| [LHR–FOR (Fortaleza)](lhr-for.md) | 4,424 mi | Medium | 48 / — |
+| [LHR–GRU (Sao Paulo Guarulhos)](lhr-gru.md) | 5,877 mi | Long | 70 / — |
+
+### via HND (Tokyo Haneda) — 29 sectors
+
+| Route | Distance | CX zone | SP Y-Flex / J-Flex |
+|---|---|---|---|
+| [HND–KMQ (Komatsu)](hnd-kmq.md) | 196 mi | Ultra-short | 25 / — |
+| [HND–ITM (Osaka Itami)](hnd-itm.md) | 249 mi | Ultra-short | 25 / — |
+| [HND–KIX (Osaka Kansai)](hnd-kix.md) | 267 mi | Ultra-short | 25 / — |
+| [HND–AXT (Akita)](hnd-axt.md) | 283 mi | Ultra-short | 25 / — |
+| [HND–TKS (Tokushima)](hnd-tks.md) | 309 mi | Ultra-short | 25 / — |
+| [HND–TAK (Takamatsu)](hnd-tak.md) | 334 mi | Ultra-short | 25 / — |
+| [HND–OKJ (Okayama)](hnd-okj.md) | 337 mi | Ultra-short | 25 / — |
+| [HND–AOJ (Aomori)](hnd-aoj.md) | 361 mi | Ultra-short | 25 / — |
+| [HND–MSJ (Misawa)](hnd-msj.md) | 367 mi | Ultra-short | 25 / — |
+| [HND–KCZ (Kochi)](hnd-kcz.md) | 373 mi | Ultra-short | 25 / — |
+| [HND–IZO (Izumo)](hnd-izo.md) | 387 mi | Ultra-short | 25 / — |
+| [HND–HIJ (Hiroshima)](hnd-hij.md) | 395 mi | Ultra-short | 25 / — |
+| [HND–MYJ (Matsuyama)](hnd-myj.md) | 419 mi | Ultra-short | 25 / — |
+| [HND–HKD (Hakodate)](hnd-hkd.md) | 433 mi | Ultra-short | 25 / — |
+| [HND–OIT (Oita)](hnd-oit.md) | 479 mi | Ultra-short | 25 / — |
+| [HND–UBJ (Ube)](hnd-ubj.md) | 494 mi | Ultra-short | 25 / — |
+| [HND–CTS (Sapporo)](hnd-cts.md) | 511 mi | Ultra-short | 25 / — |
+| [HND–SPK (Sapporo (city))](hnd-spk.md) | 511 mi | Ultra-short | 25 / — |
+| [HND–OBO (Obihiro)](hnd-obo.md) | 529 mi | Ultra-short | 25 / — |
+| [HND–KMI (Miyazaki)](hnd-kmi.md) | 541 mi | Ultra-short | 25 / — |
+| [HND–KMJ (Kumamoto)](hnd-kmj.md) | 542 mi | Ultra-short | 25 / — |
+| [HND–FUK (Fukuoka)](hnd-fuk.md) | 547 mi | Ultra-short | 25 / — |
+| [HND–KUH (Kushiro)](hnd-kuh.md) | 568 mi | Ultra-short | 25 / — |
+| [HND–KOJ (Kagoshima)](hnd-koj.md) | 580 mi | Ultra-short | 25 / — |
+| [HND–AKJ (Asahikawa)](hnd-akj.md) | 585 mi | Ultra-short | 25 / — |
+| [HND–NGS (Nagasaki)](hnd-ngs.md) | 590 mi | Ultra-short | 25 / — |
+| [HND–MMB (Memanbetsu)](hnd-mmb.md) | 622 mi | Ultra-short | 25 / — |
+| [HND–OKA (Okinawa)](hnd-oka.md) | 964 mi | Short – Type 2 | 35 / — |
+| [HND–HNL (Honolulu)](hnd-hnl.md) | 3,848 mi | Medium | 48 / — |
+
+### via LAX (Los Angeles) — 26 sectors
+
+| Route | Distance | CX zone | SP Y-Flex / J-Flex |
+|---|---|---|---|
+| [LAX–MCO (Orlando)](lax-mco.md) | — | Short – Type 1 | 30 / — |
+| [LAX–SAN (San Diego)](lax-san.md) | 109 mi | Ultra-short | 25 / — |
+| [LAX–LAS (Las Vegas)](lax-las.md) | 235 mi | Ultra-short | 25 / — |
+| [LAX–SJC (San Jose)](lax-sjc.md) | 308 mi | Ultra-short | 25 / — |
+| [LAX–SFO (San Francisco)](lax-sfo.md) | 337 mi | Ultra-short | 25 / — |
+| [LAX–PHX (Phoenix)](lax-phx.md) | 368 mi | Ultra-short | 25 / — |
+| [LAX–SLC (Salt Lake City)](lax-slc.md) | 588 mi | Ultra-short | 25 / — |
+| [LAX–PDX (Portland)](lax-pdx.md) | 833 mi | Short – Type 1 | 30 / — |
+| [LAX–DEN (Denver)](lax-den.md) | 847 mi | Short – Type 1 | 30 / — |
+| [LAX–SEA (Seattle)](lax-sea.md) | 954 mi | Short – Type 1 | 30 / — |
+| [LAX–DFW (Dallas/Fort Worth)](lax-dfw.md) | 1,232 mi | Short – Type 1 | 30 / — |
+| [LAX–AUS (Austin)](lax-aus.md) | 1,235 mi | Short – Type 1 | 30 / — |
+| [LAX–GDL (Guadalajara)](lax-gdl.md) | 1,307 mi | Short – Type 1 | 30 / — |
+| [LAX–IAH (Houston Bush)](lax-iah.md) | 1,375 mi | Short – Type 1 | 30 / — |
+| [LAX–MEX (Mexico City)](lax-mex.md) | 1,553 mi | Short – Type 1 | 30 / — |
+| [LAX–STL (St Louis)](lax-stl.md) | 1,588 mi | Short – Type 1 | 30 / — |
+| [LAX–ORD (Chicago O'Hare)](lax-ord.md) | 1,740 mi | Short – Type 1 | 30 / — |
+| [LAX–BNA (Nashville)](lax-bna.md) | 1,792 mi | Short – Type 1 | 30 / — |
+| [LAX–IAD (Washington Dulles)](lax-iad.md) | 2,282 mi | Short – Type 1 | 30 / — |
+| [LAX–FLL (Fort Lauderdale)](lax-fll.md) | 2,338 mi | Short – Type 1 | 30 / — |
+| [LAX–MIA (Miami)](lax-mia.md) | 2,338 mi | Short – Type 1 | 30 / — |
+| [LAX–EWR (New York Newark)](lax-ewr.md) | 2,448 mi | Short – Type 1 | 30 / — |
+| [LAX–JFK (New York JFK)](lax-jfk.md) | 2,468 mi | Short – Type 1 | 30 / — |
+| [LAX–BOS (Boston)](lax-bos.md) | 2,604 mi | Short – Type 1 | 30 / — |
+| [LAX–LIM (Lima)](lax-lim.md) | 4,174 mi | Medium | 48 / — |
+| [LAX–SCL (Santiago)](lax-scl.md) | 5,582 mi | Long | 70 / — |
+
+### via JFK (New York JFK) — 19 sectors
+
+| Route | Distance | CX zone | SP Y-Flex / J-Flex |
+|---|---|---|---|
+| [JFK–BWI (Baltimore)](jfk-bwi.md) | — | Ultra-short | 25 / — |
+| [JFK–CLE (Cleveland)](jfk-cle.md) | — | Ultra-short | 25 / — |
+| [JFK–DFW (Dallas/Fort Worth)](jfk-dfw.md) | — | Short – Type 1 | 30 / — |
+| [JFK–IAD (Washington Dulles)](jfk-iad.md) | — | Ultra-short | 25 / — |
+| [JFK–PIT (Pittsburgh)](jfk-pit.md) | — | Ultra-short | 25 / — |
+| [JFK–STL (St Louis)](jfk-stl.md) | — | Short – Type 1 | 30 / — |
+| [JFK–BDL (Hartford)](jfk-bdl.md) | 106 mi | Ultra-short | 25 / — |
+| [JFK–BOS (Boston)](jfk-bos.md) | 187 mi | Ultra-short | 25 / — |
+| [JFK–DCA (Washington National)](jfk-dca.md) | 212 mi | Ultra-short | 25 / — |
+| [JFK–RDU (Raleigh-Durham)](jfk-rdu.md) | 426 mi | Ultra-short | 25 / — |
+| [JFK–CMH (Columbus)](jfk-cmh.md) | 481 mi | Ultra-short | 25 / — |
+| [JFK–MCO (Orlando)](jfk-mco.md) | 944 mi | Short – Type 1 | 30 / — |
+| [JFK–MIA (Miami)](jfk-mia.md) | 1,090 mi | Short – Type 1 | 30 / — |
+| [JFK–SJU (San Juan)](jfk-sju.md) | 1,601 mi | Short – Type 1 | 30 / — |
+| [JFK–LIM (Lima)](jfk-lim.md) | 3,643 mi | Medium | 48 / — |
+| [JFK–BSB (Brasilia)](jfk-bsb.md) | 4,241 mi | Medium | 48 / — |
+| [JFK–GRU (Sao Paulo Guarulhos)](jfk-gru.md) | 4,760 mi | Medium | 48 / — |
+| [JFK–GIG (Rio de Janeiro)](jfk-gig.md) | 4,801 mi | Medium | 48 / — |
+| [JFK–SCL (Santiago)](jfk-scl.md) | 5,116 mi | Long | 70 / — |
+
+### via CDG (Paris CDG) — 18 sectors
+
+| Route | Distance | CX zone | SP Y-Flex / J-Flex |
+|---|---|---|---|
+| [CDG–BHX (Birmingham)](cdg-bhx.md) | — | Ultra-short | 25 / — |
+| [CDG–BOD (Bordeaux)](cdg-bod.md) | — | Ultra-short | 25 / — |
+| [CDG–EXT (Exeter)](cdg-ext.md) | — | Ultra-short | 25 / — |
+| [CDG–MAN (Manchester)](cdg-man.md) | — | Ultra-short | 25 / — |
+| [CDG–MPL (Montpellier)](cdg-mpl.md) | — | Ultra-short | 25 / — |
+| [CDG–QJZ (Nantes (rail))](cdg-qjz.md) | — | Ultra-short | 25 / — |
+| [CDG–SYD (Sydney)](cdg-syd.md) | — | Ultra-long | 90 / — |
+| [CDG–XDB (Lille (rail))](cdg-xdb.md) | — | Ultra-short | 25 / — |
+| [CDG–XHK (Valence (rail))](cdg-xhk.md) | — | Ultra-short | 25 / — |
+| [CDG–XOP (XOP)](cdg-xop.md) | — | Ultra-short | 25 / — |
+| [CDG–XPJ (Montpellier (rail))](cdg-xpj.md) | — | Ultra-short | 25 / — |
+| [CDG–XRF (Marseille (rail))](cdg-xrf.md) | — | Ultra-short | 25 / — |
+| [CDG–XSH (XSH)](cdg-xsh.md) | — | Ultra-short | 25 / — |
+| [CDG–XYD (Lyon (rail))](cdg-xyd.md) | — | Ultra-short | 25 / — |
+| [CDG–ZFQ (Bordeaux (rail))](cdg-zfq.md) | — | Ultra-short | 25 / — |
+| [CDG–ZLN (Le Mans (rail))](cdg-zln.md) | — | Ultra-short | 25 / — |
+| [CDG–HEL (Helsinki)](cdg-hel.md) | 1,177 mi | Short – Type 1 | 30 / — |
+| [CDG–GRU (Sao Paulo Guarulhos)](cdg-gru.md) | 5,843 mi | Long | 70 / — |
+
+### via SYD (Sydney) — 17 sectors
+
+| Route | Distance | CX zone | SP Y-Flex / J-Flex |
+|---|---|---|---|
+| [SYD–ASP (Alice Springs)](syd-asp.md) | — | Short – Type 1 | 30 / — |
+| [SYD–CFS (Coffs Harbour)](syd-cfs.md) | — | Ultra-short | 25 / — |
+| [SYD–HBA (Hobart)](syd-hba.md) | — | Ultra-short | 25 / — |
+| [SYD–HTI (Hamilton Island)](syd-hti.md) | — | Short – Type 1 | 30 / — |
+| [SYD–MKY (Mackay)](syd-mky.md) | — | Short – Type 1 | 30 / — |
+| [SYD–NTL (Newcastle NSW)](syd-ntl.md) | — | Ultra-short | 25 / — |
+| [SYD–ROK (Rockhampton)](syd-rok.md) | — | Ultra-short | 25 / — |
+| [SYD–TSV (Townsville)](syd-tsv.md) | — | Short – Type 1 | 30 / — |
+| [SYD–WTB (Toowoomba)](syd-wtb.md) | — | Ultra-short | 25 / — |
+| [SYD–CBR (Canberra)](syd-cbr.md) | 147 mi | Ultra-short | 25 / — |
+| [SYD–OOL (Gold Coast)](syd-ool.md) | 421 mi | Ultra-short | 25 / — |
+| [SYD–MEL (Melbourne)](syd-mel.md) | 438 mi | Ultra-short | 25 / — |
+| [SYD–BNE (Brisbane)](syd-bne.md) | 464 mi | Ultra-short | 25 / — |
+| [SYD–ADL (Adelaide)](syd-adl.md) | 723 mi | Ultra-short | 25 / — |
+| [SYD–CNS (Cairns)](syd-cns.md) | 1,225 mi | Short – Type 1 | 30 / — |
+| [SYD–AKL (Auckland)](syd-akl.md) | 1,342 mi | Short – Type 1 | 30 / — |
+| [SYD–SCL (Santiago)](syd-scl.md) | 7,047 mi | Long | 70 / — |
+
+### via FRA (Frankfurt) — 16 sectors
+
+| Route | Distance | CX zone | SP Y-Flex / J-Flex |
+|---|---|---|---|
+| [FRA–BKK (Bangkok Suvarnabhumi)](fra-bkk.md) | — | Long | 70 / — |
+| [FRA–BRU (Brussels)](fra-bru.md) | — | Ultra-short | 25 / — |
+| [FRA–CGN (Cologne)](fra-cgn.md) | — | Ultra-short | 25 / — |
+| [FRA–DRS (Dresden)](fra-drs.md) | — | Ultra-short | 25 / — |
+| [FRA–HAJ (Hannover)](fra-haj.md) | — | Ultra-short | 25 / — |
+| [FRA–HAM (Hamburg)](fra-ham.md) | — | Ultra-short | 25 / — |
+| [FRA–MUC (Munich)](fra-muc.md) | — | Ultra-short | 25 / — |
+| [FRA–NUE (Nuremberg)](fra-nue.md) | — | Ultra-short | 25 / — |
+| [FRA–OSL (Oslo)](fra-osl.md) | — | Ultra-short | 25 / — |
+| [FRA–STR (Stuttgart)](fra-str.md) | — | Ultra-short | 25 / — |
+| [FRA–VIE (Vienna)](fra-vie.md) | — | Ultra-short | 25 / — |
+| [FRA–BER (Berlin)](fra-ber.md) | 267 mi | Ultra-short | 25 / — |
+| [FRA–TXL (Berlin Tegel)](fra-txl.md) | 269 mi | Ultra-short | 25 / — |
+| [FRA–BUD (Budapest)](fra-bud.md) | 518 mi | Ultra-short | 25 / — |
+| [FRA–HEL (Helsinki)](fra-hel.md) | 956 mi | Short – Type 1 | 30 / — |
+| [FRA–GRU (Sao Paulo Guarulhos)](fra-gru.md) | 6,087 mi | Long | 70 / — |
+
+### via BKK (Bangkok Suvarnabhumi) — 15 sectors
+
+| Route | Distance | CX zone | SP Y-Flex / J-Flex |
+|---|---|---|---|
+| [BKK–ALA (Almaty)](bkk-ala.md) | — | Short – Type 1 | 30 / — |
+| [BKK–BLR (Bengaluru)](bkk-blr.md) | — | Short – Type 2 | 35 / — |
+| [BKK–CCU (Kolkata)](bkk-ccu.md) | — | Short – Type 2 | 35 / — |
+| [BKK–CNX (Chiang Mai)](bkk-cnx.md) | — | Ultra-short | 25 / — |
+| [BKK–DXB (Dubai)](bkk-dxb.md) | — | Medium | 48 / — |
+| [BKK–HKT (Phuket)](bkk-hkt.md) | — | Ultra-short | 25 / — |
+| [BKK–KBV (Krabi)](bkk-kbv.md) | — | Ultra-short | 25 / — |
+| [BKK–KHI (Karachi)](bkk-khi.md) | — | Short – Type 1 | 30 / — |
+| [BKK–LPQ (Luang Prabang)](bkk-lpq.md) | — | Ultra-short | 25 / — |
+| [BKK–USM (Koh Samui)](bkk-usm.md) | — | Ultra-short | 25 / — |
+| [BKK–VTE (Vientiane)](bkk-vte.md) | — | Ultra-short | 25 / — |
+| [BKK–SIN (Singapore)](bkk-sin.md) | 878 mi | Short – Type 1 | 30 / — |
+| [BKK–CMB (Colombo)](bkk-cmb.md) | 1,486 mi | Short – Type 2 | 35 / — |
+| [BKK–DEL (Delhi)](bkk-del.md) | 1,831 mi | Short – Type 2 | 35 / — |
+| [BKK–BOM (Mumbai)](bkk-bom.md) | 1,883 mi | Short – Type 2 | 35 / — |
+
+### via YVR (Vancouver) — 14 sectors
+
+| Route | Distance | CX zone | SP Y-Flex / J-Flex |
+|---|---|---|---|
+| [YVR–DFW (Dallas/Fort Worth)](yvr-dfw.md) | — | Short – Type 1 | 30 / — |
+| [YVR–JFK (New York JFK)](yvr-jfk.md) | — | Short – Type 1 | 30 / — |
+| [YVR–YEG (Edmonton)](yvr-yeg.md) | — | Ultra-short | 25 / — |
+| [YVR–YLW (Kelowna)](yvr-ylw.md) | — | Ultra-short | 25 / — |
+| [YVR–YUL (Montreal)](yvr-yul.md) | — | Short – Type 1 | 30 / — |
+| [YVR–YWG (Winnipeg)](yvr-ywg.md) | — | Short – Type 1 | 30 / — |
+| [YVR–YXE (Saskatoon)](yvr-yxe.md) | — | Ultra-short | 25 / — |
+| [YVR–YXS (Prince George)](yvr-yxs.md) | — | Ultra-short | 25 / — |
+| [YVR–YYC (Calgary)](yvr-yyc.md) | — | Ultra-short | 25 / — |
+| [YVR–YYJ (Victoria)](yvr-yyj.md) | — | Ultra-short | 25 / — |
+| [YVR–YYZ (Toronto)](yvr-yyz.md) | — | Short – Type 1 | 30 / — |
+| [YVR–SEA (Seattle)](yvr-sea.md) | 126 mi | Ultra-short | 25 / — |
+| [YVR–PDX (Portland)](yvr-pdx.md) | 250 mi | Ultra-short | 25 / — |
+| [YVR–MEX (Mexico City)](yvr-mex.md) | 2,450 mi | Short – Type 1 | 30 / — |
+
+### via MEL (Melbourne) — 13 sectors
+
+| Route | Distance | CX zone | SP Y-Flex / J-Flex |
+|---|---|---|---|
+| [MEL–BME (Broome)](mel-bme.md) | — | Short – Type 1 | 30 / — |
+| [MEL–DPO (Devonport)](mel-dpo.md) | — | Ultra-short | 25 / — |
+| [MEL–HBA (Hobart)](mel-hba.md) | — | Ultra-short | 25 / — |
+| [MEL–LST (Launceston)](mel-lst.md) | — | Ultra-short | 25 / — |
+| [MEL–MNL (Manila)](mel-mnl.md) | — | Medium | 48 / — |
+| [MEL–OOL (Gold Coast)](mel-ool.md) | — | Short – Type 1 | 30 / — |
+| [MEL–TSV (Townsville)](mel-tsv.md) | — | Short – Type 1 | 30 / — |
+| [MEL–CBR (Canberra)](mel-cbr.md) | 291 mi | Ultra-short | 25 / — |
+| [MEL–ADL (Adelaide)](mel-adl.md) | 399 mi | Ultra-short | 25 / — |
+| [MEL–BNE (Brisbane)](mel-bne.md) | 854 mi | Short – Type 1 | 30 / — |
+| [MEL–CNS (Cairns)](mel-cns.md) | 1,438 mi | Short – Type 1 | 30 / — |
+| [MEL–DRW (Darwin)](mel-drw.md) | 1,946 mi | Short – Type 1 | 30 / — |
+| [MEL–SCL (Santiago)](mel-scl.md) | 7,018 mi | Long | 70 / — |
+
+### via PEK (Beijing Capital) — 13 sectors
+
+| Route | Distance | CX zone | SP Y-Flex / J-Flex |
+|---|---|---|---|
+| [PEK–CGO (Zhengzhou)](pek-cgo.md) | — | Ultra-short | 25 / — |
+| [PEK–CSX (Changsha)](pek-csx.md) | — | Short – Type 1 | 30 / — |
+| [PEK–HAK (Haikou)](pek-hak.md) | — | Short – Type 1 | 30 / — |
+| [PEK–JMU (Jiamusi)](pek-jmu.md) | — | Short – Type 1 | 30 / — |
+| [PEK–MFM (Macao)](pek-mfm.md) | — | Short – Type 1 | 30 / — |
+| [PEK–NDG (Qiqihar)](pek-ndg.md) | — | Ultra-short | 25 / — |
+| [PEK–PVG (Shanghai Pudong)](pek-pvg.md) | — | Ultra-short | 25 / — |
+| [PEK–SHE (Shenyang)](pek-she.md) | — | Ultra-short | 25 / — |
+| [PEK–SJW (Shijiazhuang)](pek-sjw.md) | — | Ultra-short | 25 / — |
+| [PEK–SZX (Shenzhen)](pek-szx.md) | — | Short – Type 1 | 30 / — |
+| [PEK–TPE (Taipei)](pek-tpe.md) | — | Short – Type 1 | 30 / — |
+| [PEK–TSN (Tianjin)](pek-tsn.md) | — | Ultra-short | 25 / — |
+| [PEK–XMN (Xiamen)](pek-xmn.md) | — | Short – Type 1 | 30 / — |
+
+### via TPE (Taipei) — 11 sectors
+
+| Route | Distance | CX zone | SP Y-Flex / J-Flex |
+|---|---|---|---|
+| [TPE–ICN (Seoul Incheon)](tpe-icn.md) | — | Short – Type 1 | 30 / — |
+| [TPE–KUL (Kuala Lumpur)](tpe-kul.md) | — | Short – Type 1 | 30 / — |
+| [TPE–PUS (Busan)](tpe-pus.md) | — | Short – Type 1 | 30 / — |
+| [TPE–RMQ (Taichung)](tpe-rmq.md) | — | Ultra-short | 25 / — |
+| [TPE–KHH (Kaohsiung)](tpe-khh.md) | 180 mi | Ultra-short | 25 / — |
+| [TPE–OKA (Okinawa)](tpe-oka.md) | 408 mi | Ultra-short | 25 / — |
+| [TPE–FUK (Fukuoka)](tpe-fuk.md) | 808 mi | Short – Type 2 | 35 / — |
+| [TPE–KIX (Osaka Kansai)](tpe-kix.md) | 1,059 mi | Short – Type 2 | 35 / — |
+| [TPE–NGO (Nagoya)](tpe-ngo.md) | 1,149 mi | Short – Type 2 | 35 / — |
+| [TPE–HND (Tokyo Haneda)](tpe-hnd.md) | 1,318 mi | Short – Type 2 | 35 / — |
+| [TPE–NRT (Tokyo Narita)](tpe-nrt.md) | 1,356 mi | Short – Type 2 | 35 / — |
+
+### via ZRH (Zurich) — 11 sectors
+
+| Route | Distance | CX zone | SP Y-Flex / J-Flex |
+|---|---|---|---|
+| [ZRH–BER (Berlin)](zrh-ber.md) | — | Ultra-short | 25 / — |
+| [ZRH–BRU (Brussels)](zrh-bru.md) | — | Ultra-short | 25 / — |
+| [ZRH–FLR (Florence)](zrh-flr.md) | — | Ultra-short | 25 / — |
+| [ZRH–HAM (Hamburg)](zrh-ham.md) | — | Ultra-short | 25 / — |
+| [ZRH–MAN (Manchester)](zrh-man.md) | — | Ultra-short | 25 / — |
+| [ZRH–STR (Stuttgart)](zrh-str.md) | — | Ultra-short | 25 / — |
+| [ZRH–TXL (Berlin Tegel)](zrh-txl.md) | — | Ultra-short | 25 / — |
+| [ZRH–VCE (Venice)](zrh-vce.md) | — | Ultra-short | 25 / — |
+| [ZRH–VIE (Vienna)](zrh-vie.md) | — | Ultra-short | 25 / — |
+| [ZRH–GVA (Geneva)](zrh-gva.md) | 143 mi | Ultra-short | 25 / — |
+| [ZRH–HEL (Helsinki)](zrh-hel.md) | 1,104 mi | Short – Type 1 | 30 / — |
+
+### via NRT (Tokyo Narita) — 7 sectors
+
+| Route | Distance | CX zone | SP Y-Flex / J-Flex |
+|---|---|---|---|
+| [NRT–HND (Tokyo Haneda)](nrt-hnd.md) | 37 mi | Ultra-short | 25 / — |
+| [NRT–NGO (Nagoya)](nrt-ngo.md) | 211 mi | Ultra-short | 25 / — |
+| [NRT–ITM (Osaka Itami)](nrt-itm.md) | 286 mi | Ultra-short | 25 / — |
+| [NRT–CTS (Sapporo)](nrt-cts.md) | 490 mi | Ultra-short | 25 / — |
+| [NRT–SPK (Sapporo (city))](nrt-spk.md) | 490 mi | Ultra-short | 25 / — |
+| [NRT–OKA (Okinawa)](nrt-oka.md) | 1,001 mi | Short – Type 2 | 35 / — |
+| [NRT–HNL (Honolulu)](nrt-hnl.md) | 3,812 mi | Medium | 48 / — |
+
+### via PVG (Shanghai Pudong) — 7 sectors
+
+| Route | Distance | CX zone | SP Y-Flex / J-Flex |
+|---|---|---|---|
+| [PVG–HGH (Hangzhou)](pvg-hgh.md) | — | Ultra-short | 25 / — |
+| [PVG–MFM (Macao)](pvg-mfm.md) | — | Short – Type 1 | 30 / — |
+| [PVG–NKG (Nanjing)](pvg-nkg.md) | — | Ultra-short | 25 / — |
+| [PVG–SHA (Shanghai Hongqiao)](pvg-sha.md) | — | Ultra-short | 25 / — |
+| [PVG–SZX (Shenzhen)](pvg-szx.md) | — | Short – Type 1 | 30 / — |
+| [PVG–TAO (Qingdao)](pvg-tao.md) | — | Ultra-short | 25 / — |
+| [PVG–XMN (Xiamen)](pvg-xmn.md) | — | Ultra-short | 25 / — |
+
+### via AKL (Auckland) — 6 sectors
+
+| Route | Distance | CX zone | SP Y-Flex / J-Flex |
+|---|---|---|---|
+| [AKL–HND (Tokyo Haneda)](akl-hnd.md) | — | Long | 70 / — |
+| [AKL–NAN (Nadi (Fiji))](akl-nan.md) | — | Short – Type 1 | 30 / — |
+| [AKL–SIN (Singapore)](akl-sin.md) | — | Long | 70 / — |
+| [AKL–WLG (Wellington)](akl-wlg.md) | 298 mi | Ultra-short | 25 / — |
+| [AKL–CHC (Christchurch)](akl-chc.md) | 462 mi | Ultra-short | 25 / — |
+| [AKL–SCL (Santiago)](akl-scl.md) | 5,997 mi | Long | 70 / — |
+
+### via KIX (Osaka Kansai) — 5 sectors
+
+| Route | Distance | CX zone | SP Y-Flex / J-Flex |
+|---|---|---|---|
+| [KIX–FUK (Fukuoka)](kix-fuk.md) | 281 mi | Ultra-short | 25 / — |
+| [KIX–CTS (Sapporo)](kix-cts.md) | 674 mi | Ultra-short | 25 / — |
+| [KIX–SPK (Sapporo (city))](kix-spk.md) | 674 mi | Ultra-short | 25 / — |
+| [KIX–OKA (Okinawa)](kix-oka.md) | 726 mi | Ultra-short | 25 / — |
+| [KIX–HNL (Honolulu)](kix-hnl.md) | 4,108 mi | Medium | 48 / — |
+
+### via SIN (Singapore) — 2 sectors
+
+| Route | Distance | CX zone | SP Y-Flex / J-Flex |
+|---|---|---|---|
+| [SIN–CGK (Jakarta)](sin-cgk.md) | 549 mi | Ultra-short | 25 / — |
+| [SIN–CMB (Colombo)](sin-cmb.md) | 1,707 mi | Short – Type 2 | 35 / — |
+
 ## oneworld partner trunk sectors
 
 | Route | Distance | Partner zone | Marketing airline(s) |
@@ -257,7 +623,7 @@ SP teasers below: Economy Flex (Y) / Business Flex (J) on CX-marketed sectors.
 | [JFK–LAX (New York JFK – Los Angeles)](jfk-lax.md) | 2,468 mi | Short | AA |
 | [KUL–LHR (Kuala Lumpur – London Heathrow)](kul-lhr.md) | 6,588 mi | Long | MH |
 | [KUL–SIN (Kuala Lumpur – Singapore)](kul-sin.md) | 184 mi | Ultra-short | MH |
-| [LHR–JFK (London Heathrow – New York JFK)](lhr-jfk.md) | 3,442 mi | Medium-1 | BA |
+| [LHR–JFK (London Heathrow – New York JFK)](lhr-jfk.md) | 3,442 mi | Medium-1 | AA, BA |
 | [MAD–JFK (Madrid – New York JFK)](mad-jfk.md) | 3,579 mi | Medium-1 | IB |
 | [MAD–LHR (Madrid – London Heathrow)](mad-lhr.md) | 774 mi | Short | IB |
 | [NAN–LAX (Nadi (Fiji) – Los Angeles)](nan-lax.md) | 5,524 mi | Long | FJ |

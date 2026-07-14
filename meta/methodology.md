@@ -42,19 +42,61 @@ last_reviewed: '2026-07-14'
 | 2026-07-14 | NZ re-probed on HKG–AKL (earlier probe was invalid) | Priced: AM per published rates, 0 SP |
 | 2026-07-14 | CX route discovery: HKG × all 383 calculator airports | API validates routes — only real CX sectors price |
 
+## Route validation semantics
+
+The calculator **validates routes per airline**: it only prices sectors the airline
+actually *markets* (own flights + codeshares under its code). Tested with absurd pairs
+(TPE–JNB, CPH–PER): every airline returns nothing — except **Japan Airlines, which prices
+any city pair** (no validation; useful as a universal distance odometer, since JL Y = 100%
+of ticketed miles). Consequences:
+
+- A sector priced by the API is genuinely creditable for that marketing carrier.
+- "All routes" per airline = its marketed-sector set, enumerable by probing its hubs
+  against the airport list (the hub census below).
+- CX prices codeshare feeder sectors beyond HKG (e.g. LHR–ABZ, SYD–MEL, PEK–PVG under CX
+  codes) — these earn from the CX table like any CX-marketed sector.
+
 ## Route-level entries
 
-The `routes/` entries were generated from a dedicated harvest (2026-07-14):
+The `routes/` entries were generated from dedicated harvests (2026-07-14):
 
-- **CX network discovery**: the calculator API validates routes for CX (non-existent
-  sectors return no records), so HKG was probed against all 383 calculator airports —
-  167 live CX-marketed sectors found (including codeshare and intermodal points).
-- Each live sector was harvested across all 4 cabins; a parallel BA probe on the same
-  pair supplies the exact ticketed mileage (BA Y = 100% of miles flown) and the partner
-  zone. Raw data: `sources/routes-raw/*.jsonl`.
-- 21 oneworld trunk sectors (LHR–JFK, SYD–MEL, DOH–LHR, …) were generated from the
-  airline-harvest samples.
+- **CX from HKG**: HKG probed against all 383 calculator airports — 167 live CX-marketed
+  sectors (including codeshare and intermodal points). Full 4-cabin detail per sector; a
+  parallel BA probe supplies exact ticketed mileage (BA Y = 100% of miles flown) and the
+  partner zone. Raw data: `sources/routes-raw/*.jsonl`.
+- **CX codeshare feeders**: CX probed from 18 gateway hubs (LHR, CDG, FRA, ZRH, PEK, PVG,
+  TPE, NRT, HND, KIX, SYD, MEL, AKL, YVR, LAX, JFK, BKK, SIN) × 383 airports — 266
+  additional live CX-marketed sectors, all detailed across 4 cabins. Distances via a JL
+  Y-cabin probe (JL prices any pair; Y = 100% of miles).
+- 21 oneworld trunk sectors (LHR–JFK, SYD–MEL, DOH–LHR, …) from the airline-harvest samples.
 - Route entries are per one-way sector; values are direction-symmetric.
+
+## Partner sector registries (hub census)
+
+Each SP-earning oneworld partner has an `airlines/<slug>-routes.md` registry: its live
+marketed sectors found by probing the hubs below against all 383 calculator airports
+(Y cabin; distance/zone from the response; other cabins resolved via the verified SP
+matrix). Raw data: `sources/census-raw/*.jsonl` (~13,000 probes, 2026-07-14).
+
+| Airline | Hubs probed | Live sectors |
+|---|---|---|
+| AA | DFW, ORD, LAX, JFK, MIA | 424 |
+| BA | LHR, LGW | 332 |
+| IB | MAD, BCN | 174 |
+| QF | SYD, MEL, BNE, PER | 160 |
+| QR | DOH | 155 |
+| AS | SEA, PDX, LAX, ANC | 96 |
+| AY | HEL | 83 |
+| MH | KUL | 69 |
+| AT | CMN | 54 |
+| RJ | AMM | 51 |
+| UL | CMB | 38 |
+| FJ | NAN, SUV | 21 |
+
+Scope caveat: sectors not touching the probed hubs (e.g. AA point-to-point flights
+avoiding all five hubs, BA regional-to-regional) are not enumerated; they follow the same
+verified model and can be priced via the airline entry + `earning/partner-model`. JL has
+no registry because the calculator prices any JL city pair (no route validation).
 
 ## Known gaps / watch items
 

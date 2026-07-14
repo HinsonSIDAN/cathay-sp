@@ -24,8 +24,9 @@ Start here:
 
 ## Top-level areas
 
-- [Routes](routes/index.md) — per-route resolved SP/miles tables: all 167 CX-marketed
-  sectors from Hong Kong + major oneworld trunk sectors
+- [Routes](routes/index.md) — per-route resolved SP/miles tables: 433 CX-marketed sectors
+  (167 from Hong Kong + 266 codeshare feeders) + oneworld trunk sectors; each oneworld
+  partner also has a registered-sectors list (1,657 sectors) under [[airlines]]
 - [Airlines](airlines/index.md) — per-airline fare class tables: CX, HK Express, all 14
   oneworld partners, 9 Asia-Miles-only partners, 2 ended/suspended
 - [Earning mechanics](earning/index.md) — the two earning models, distance zones, universal
