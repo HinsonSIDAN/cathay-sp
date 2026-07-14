@@ -1,0 +1,52 @@
+# Cathay membership programme — program-level rules
+# Source: https://www.cathaypacific.com/cx/en_US/membership/status-points.html (retrieved 2026-07-14)
+
+program:
+  name: Cathay membership programme
+  operator: Cathay Pacific Airways
+  status_currency: Status Points
+  reward_currency: Asia Miles
+  alliance: oneworld
+
+status_tiers:
+  - name: Green
+    status_points_to_upgrade: 0
+    notes: Joining tier, lifetime membership.
+  - name: Silver
+    status_points_to_upgrade: 300
+    oneworld_equivalent: Ruby
+  - name: Gold
+    status_points_to_upgrade: 600
+    oneworld_equivalent: Sapphire
+  - name: Diamond
+    status_points_to_upgrade: 1200
+    oneworld_equivalent: Emerald
+
+qualification_rules:
+  period: membership year
+  additional_requirement: >-
+    At least one eligible sector flown on Cathay Pacific within the membership year,
+    in addition to the Status Points threshold.
+  upgrade_timing: >-
+    Upgrade occurs as soon as the Status Points threshold is reached within the
+    membership year. Only one status level can be progressed at a time
+    (no multi-level jumps).
+
+earning_model:
+  description: >-
+    Status Points earnings are table lookups, not a single formula. The lookup key is:
+    airline × distance zone (or route) × cabin × fare class / fare type.
+  factors:
+    - airline (marketing carrier)
+    - distance zone (miles flown between origin and destination; see zones.yaml)
+    - cabin class
+    - fare class (booking class letter) or fare type (Flex / Essential / Light on CX)
+  cx_relationship: On Cathay Pacific-marketed flights, Asia Miles = Status Points x 100.
+
+upcoming_changes:
+  - effective: 2027-01-01
+    name: Enhanced membership programme ("A Smoother, Simpler and Better Cathay Membership Programme")
+    transition: >-
+      1 Jan – 31 Dec 2026 is a transition period. Any renewal, upgrade or downgrade
+      during 2026 resets Status Points to zero and the membership year ends 31 Dec 2026.
+    details: see docs/2027-programme-changes.md

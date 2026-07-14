@@ -1,0 +1,48 @@
+# Distance zones for Cathay Pacific-marketed flights (effective 2025-08-20)
+# Based on miles flown between origin and destination.
+# Source: https://www.cathaypacific.com/cx/en_US/membership/news-and-updates/Changes-to-your-Status-Points-and-Asia-Miles-earnings-on-flights.html
+# (retrieved 2026-07-14)
+
+effective_from: 2025-08-20
+
+zones:
+  - id: ultra_short
+    name: Ultra-short
+    distance_miles: [1, 750]
+    examples_from_hkg: [Hanoi, Manila, Taipei]
+
+  - id: short_type_1
+    name: Short – Type 1
+    distance_miles: [751, 2750]
+    scope: Routes 751–2,750 miles to destinations NOT in the Short – Type 2 country list.
+    examples_from_hkg: [Beijing, Seoul, Singapore]
+
+  - id: short_type_2
+    name: Short – Type 2
+    distance_miles: [751, 2750]
+    scope: >-
+      Routes 751–2,750 miles to or from Japan, Indonesia, Sri Lanka, Nepal,
+      Bangladesh and India.
+    countries: [Japan, Indonesia, Sri Lanka, Nepal, Bangladesh, India]
+    examples_from_hkg: [Jakarta, Mumbai, Tokyo]
+
+  - id: medium
+    name: Medium
+    distance_miles: [2751, 5000]
+    examples_from_hkg: [Dubai, Melbourne, Sydney]
+
+  - id: long
+    name: Long
+    distance_miles: [5001, 7500]
+    examples_from_hkg: [London, Paris, San Francisco]
+
+  - id: ultra_long
+    name: Ultra-long
+    distance_miles: [7501, null]
+    examples_from_hkg: [Chicago, New York, Toronto]
+
+notes:
+  - The zone split of Short into Type 1 / Type 2 and the merge of 2,751–5,000 miles
+    into a single Medium zone took effect 2025-08-20.
+  - Zones apply to Cathay Pacific-marketed flights. Partner airline earning tables
+    use their own zone/route definitions (see each airline file).

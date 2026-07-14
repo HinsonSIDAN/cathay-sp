@@ -1,0 +1,167 @@
+# Cathay Pacific (CX) — Status Points & Asia Miles earning on CX-marketed flights
+# Effective for tickets issued on/after 2025-08-20 (departures on/after that date).
+# Sources:
+#   - https://www.cathaypacific.com/cx/en_US/membership/news-and-updates/Changes-to-your-Status-Points-and-Asia-Miles-earnings-on-flights.html
+#   - https://www.cathaypacific.com/content/dam/cx/membership/changes-to-status-points-and-am-earnings-on-flights-full-table-ww-v3.pdf
+#   (both retrieved 2026-07-14; PDF archived in sources/)
+#
+# Notes:
+#   - Applies to flights MARKETED by Cathay Pacific (CX flight number).
+#   - Zones per data/zones.yaml (miles flown between origin and destination).
+#   - Asia Miles = Status Points x 100 for every cell in this table.
+#   - Earning is per one-way sector.
+
+airline: Cathay Pacific
+iata: CX
+alliance: oneworld
+relationship: programme owner
+effective_from: 2025-08-20
+zone_scheme: cx_distance_zones   # see data/zones.yaml
+asia_miles_rule: status_points * 100
+
+# status_points[cabin][fare group] -> {zone: SP}
+earning:
+  first:
+    - fare_classes: [F, A]
+      fare_type: Flex
+      status_points:
+        ultra_short: 35
+        short_type_1: 45
+        short_type_2: 60
+        medium: 110
+        long: 160
+        ultra_long: 180
+
+  business:
+    - fare_classes: [J, C]
+      fare_type: Flex
+      status_points:
+        ultra_short: 30
+        short_type_1: 40
+        short_type_2: 50
+        medium: 90
+        long: 130
+        ultra_long: 150
+    - fare_classes: [D, P, I]
+      fare_type: Essential, Light
+      status_points:
+        ultra_short: 25
+        short_type_1: 35
+        short_type_2: 45
+        medium: 75
+        long: 100
+        ultra_long: 120
+
+  premium_economy:
+    - fare_classes: [W, R]
+      fare_type: Flex
+      status_points:
+        ultra_short: 25
+        short_type_1: 30
+        short_type_2: 35
+        medium: 60
+        long: 80
+        ultra_long: 100
+    - fare_classes: [E]
+      fare_type: Essential
+      status_points:
+        ultra_short: 15
+        short_type_1: 20
+        short_type_2: 25
+        medium: 45
+        long: 65
+        ultra_long: 85
+
+  economy:
+    - fare_classes: [Y, B, H, K]
+      fare_type: Flex
+      status_points:
+        ultra_short: 25
+        short_type_1: 30
+        short_type_2: 35
+        medium: 48
+        long: 70
+        ultra_long: 90
+    - fare_classes: [Y, B, H, K]
+      fare_type: Essential
+      status_points:
+        ultra_short: 15
+        short_type_1: 20
+        short_type_2: 25
+        medium: 38
+        long: 60
+        ultra_long: 70
+    - fare_classes: [Y, B, H, K]
+      fare_type: Light
+      status_points:
+        ultra_short: 10
+        short_type_1: 15
+        short_type_2: 18
+        medium: 30
+        long: 40
+        ultra_long: 50
+    - fare_classes: [M, L, V]
+      fare_type: Flex
+      status_points:
+        ultra_short: 20
+        short_type_1: 25
+        short_type_2: 30
+        medium: 42
+        long: 60
+        ultra_long: 80
+    - fare_classes: [M, L, V]
+      fare_type: Essential
+      status_points:
+        ultra_short: 10
+        short_type_1: 15
+        short_type_2: 20
+        medium: 32
+        long: 50
+        ultra_long: 60
+    - fare_classes: [M, L, V]
+      fare_type: Light
+      status_points:
+        ultra_short: 6
+        short_type_1: 10
+        short_type_2: 12
+        medium: 22
+        long: 32
+        ultra_long: 40
+    - fare_classes: [S, N, Q, O]
+      fare_type: Flex
+      status_points:
+        ultra_short: 15
+        short_type_1: 20
+        short_type_2: 25
+        medium: 32
+        long: 38
+        ultra_long: 45
+    - fare_classes: [S, N, Q, O]
+      fare_type: Essential
+      status_points:
+        ultra_short: 5
+        short_type_1: 10
+        short_type_2: 15
+        medium: 22
+        long: 28
+        ultra_long: 35
+    - fare_classes: [S, N, Q, O]
+      fare_type: Light
+      status_points:
+        ultra_short: 3
+        short_type_1: 6
+        short_type_2: 8
+        medium: 15
+        long: 18
+        ultra_long: 25
+
+transition_rules:
+  - ticket_issued: before 2025-08-20
+    departure: before 2025-08-20
+    earning: existing (pre-2025-08-20) rates
+  - ticket_issued: before 2025-08-20
+    departure: on/after 2025-08-20
+    earning: higher of existing or new rates (shortfall adjusted within 30 days)
+  - ticket_issued: on/after 2025-08-20
+    departure: on/after 2025-08-20
+    earning: new rates (this table)
