@@ -34,7 +34,7 @@ zones:
 # Status Points per (tier, zone). Tier letters are the calculator's
 # bookingClassGroup values; every oneworld airline maps its booking classes
 # onto these tiers (see per-airline files). Verified consistent across ALL
-# oneworld partners with zero conflicts (see docs/methodology.md).
+# oneworld partners with zero conflicts (see meta/methodology.md).
 sp_matrix:
   #     ultra_short  short  medium_1  medium_2  long  ultra_long
   A:    [15,         25,    50,       70,       90,   100]   # First-tier (150% classes)

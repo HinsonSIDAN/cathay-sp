@@ -1,0 +1,36 @@
+---
+title: British Airways (BA)
+description: British Airways (BA) earning when crediting to Cathay — Asia Miles rate and Status Points per booking class and distance zone (oneworld member).
+tags: [reference, airline, earning, oneworld]
+sensitivity: public
+related:
+  - earning/partner-model
+iata: BA
+alliance: oneworld
+earns_status_points: true
+last_reviewed: '2026-07-14'
+source_url: https://www.cathaypacific.com/cx/en_HK/our-partners/british-airways.html
+---
+
+> **Source:** [British Airways partner page (cathaypacific.com)](https://www.cathaypacific.com/cx/en_HK/our-partners/british-airways.html) and the official Cathay Status Points & Asia Miles calculator (API-observed, 2026-07-14).
+
+British Airways is a oneworld member: flights marketed by BA earn **Asia Miles** (rate % × actual miles flown) **and Status Points** (zone lookup by SP tier) when credited to Cathay. Zones and the SP tier matrix are defined in [[earning/partner-model]].
+
+## Earning by booking class
+
+| Cabin | Fare classes | Scope | Asia Miles | SP tier | SP Ultra-short | SP Short | SP Medium-1 | SP Medium-2 | SP Long | SP Ultra-long |
+|---|---|---|---|---|---|---|---|---|---|---|
+| First | A, F | all | 150% | A | 15 | 25 | 50 | 70 | 90 | 100 |
+| Business | C, D, I, J, R | all | 125% | B | 15 | 25 | 45 | 60 | 75 | 85 |
+| Premium Economy | W | all | 110% | D | 10 | 15 | 25 | 30 | 40 | 45 |
+| Premium Economy | E, T | all | 100% | E | 5 | 10 | 20 | 25 | 35 | 40 |
+| Economy | B, H, Y | all | 100% | F | 5 | 10 | 20 | 25 | 35 | 40 |
+| Economy | K, L, M, N, Q, S, V | all | 25% | J | 5 | 5 | 5 | 10 | 10 | 10 |
+
+## Eligibility
+
+Asia Miles can be earned only in eligible classes on flights marketed and operated by British Airways, as well as on codeshare flights operated by all one world® carriers. Participating affiliates of British Airways: CityFlyer and Sun-Air of Scandinavia
+
+---
+
+Machine-readable source of this entry: `data/airlines/british-airways.yaml` in this repo (raw calculator API samples under `sources/api-raw/`).
